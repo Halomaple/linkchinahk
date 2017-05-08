@@ -112,7 +112,7 @@ nav.navbar.bootsnav.navbar-mobile .navbar-collapse.in{
 	text-align: right;
 	width: 200px;
 }
-nav.navbar.bootsnav.navbar-mobile ul.nav{
+nav.navbar.bootsnav.navbar-mobile .navbar-collapse.in ul.nav{
 	padding: 0;
 	margin: 0;
 	width: 100%;
@@ -135,9 +135,9 @@ nav.navbar.bootsnav.navbar-mobile ul.nav{
 	display: block !important;
 }
 .navbar-collapse.in .navbar-nav > li > ul > li {
-	font-size: .9;
+	font-size: .8;
 	border-bottom: 1px solid #efefef;
-	padding: 15px 15px;
+	padding: 10px 10px;
 }
 
 /*Flexslider*/
