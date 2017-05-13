@@ -446,10 +446,10 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked {
 		font-weight: normal;
 	}
 	nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after {
-		font-family: 'FontAwesome';
-		content: "\f0d7";
-		margin-left: 5px;
-		margin-top: 2px;
+		/*font-family: 'FontAwesome';*/
+		/*content: "\f0d7";*/
+		/*margin-left: 5px;*/
+		/*margin-top: 2px;*/
 	}
 	nav.navbar.bootsnav li.dropdown ul.dropdown-menu {
 		-moz-box-shadow: 0px 0px 0px;
@@ -481,13 +481,13 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked {
 		text-align: right;
 	}
 	nav.navbar.bootsnav li.dropdown ul.dropdown-menu li.dropdown > a.dropdown-toggle:before {
-		font-family: 'FontAwesome';
+		/*font-family: 'FontAwesome';*/
 		float: right;
 		content: "\f105";
 		margin-top: 0;
 	}
 	nav.navbar.bootsnav ul.navbar-right li.dropdown ul.dropdown-menu li.dropdown > a.dropdown-toggle:before {
-		font-family: 'FontAwesome';
+		/*font-family: 'FontAwesome';*/
 		float: left;
 		content: "\f104";
 		margin-top: 0;
@@ -779,7 +779,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked {
 		margin-top: 0;
 	}
 	nav.bootsnav.navbar-sidebar ul.nav li.dropdown ul.dropdown-menu li.dropdown > a:before {
-		font-family: 'FontAwesome';
+		/*font-family: 'FontAwesome';*/
 		content: "\f105";
 		float: right;
 	}
@@ -806,7 +806,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked {
 		color: #6f6f6f;
 	}
 	nav.bootsnav.navbar-sidebar .dropdown .megamenu-content .col-menu .title:before {
-		font-family: 'FontAwesome';
+		/*font-family: 'FontAwesome';*/
 		content: "\f105";
 		float: right;
 	}
@@ -869,7 +869,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked {
 		float: none;
 	}
 	nav.navbar.bootsnav li.dropdown a.dropdown-toggle:before {
-		font-family: 'FontAwesome';
+		/*font-family: 'FontAwesome';*/
 		content: "\f105";
 		float: right;
 		font-size: 16px;
@@ -958,7 +958,7 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked {
 		padding: 8px 0;
 	}
 	nav.navbar.bootsnav .dropdown .megamenu-content .col-menu .title:before {
-		font-family: 'FontAwesome';
+		/*font-family: 'FontAwesome';*/
 		content: "\f105";
 		float: right;
 		font-size: 16px;
