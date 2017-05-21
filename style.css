@@ -165,74 +165,20 @@ nav.navbar.bootsnav.navbar-mobile .navbar-collapse.in ul.nav{
 	transform: scale(1.2);
 }
 
-/*Company slogan*/
-.company-slogan {
+/*Company boxes*/
+.company-boxes {
 	width: 100%;
 	font-weight: 500;
 	font-style: italic;
 	padding: 5px 0;
+	display: flex;
+	justify-content: space-around;
 }
-.company-slogan div {
-	width: 100%;
+.company-boxes div {
 	white-space: nowrap;
 }
-.company-slogan .chinese {
-	text-align: right;
-}
-.company-slogan .english {
-	text-align: left;
-	color: #818183;
-	margin-top: -5px;
-}
-@media (min-width:768px) {
-	.company-slogan .chinese {
-		font-size: 24px;
-		padding-right: 45%;
-		font-weight: 600;
-	}
-	.company-slogan .english {
-		font-size: 20px;
-		padding-left: 45%;
-	}
-}
-@media (min-width:1100px) {
-	.company-slogan .chinese {
-		padding-right: 50%;
-	}
-	.company-slogan .english {
-		padding-left: 50%;
-		margin-top: -8px;
-	}
-}
-@media (max-width:768px) {
-	.company-slogan div {
-		width: 100%;
-		white-space: normal;
-	}
-	.company-slogan .chinese {
-		padding-left: 30%;
-		text-align: left;
-		font-size: 16px;
-	}
-	.company-slogan .english {
-		font-size: 12px;
-		text-align: right;
-		padding-right: 30%;
-	}
-}
-@media (max-width:450px) {
-	.company-slogan .chinese {
-		font-size: 14px;
-	}
-	.company-slogan .english {
-		font-size: 10px;
-	}
-	.company-slogan .chinese {
-		text-align: left;
-	}
-	.company-slogan .english {
-		text-align: right;
-	}
+.company-boxes i.glyphicon{
+	transform: scale(3.5);
 }
 
 /*Main Content*/

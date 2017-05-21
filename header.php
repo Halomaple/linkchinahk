@@ -100,5 +100,5 @@
 		</div>
 	<?php endif ?>
 
-	<div class="container <?php echo is_home() ? '' : '' ?> ">
+	<div class="container">
 		<div class="row">
