@@ -33,7 +33,12 @@
 <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 <script type="text/javascript">
 	//limit ip access
-	if(!returnCitySN["cip"] || returnCitySN["cip"] != '183.11.130.111'){
+	var allowIPList = [
+		'183.11.128.163',
+		'103.44.62.144'
+	];
+
+	if(!returnCitySN["cip"] || allowIPList.indexOf(returnCitySN["cip"]) == -1){
 		$('body').empty();
 		$('body').append('<h3>LinkChina HK is upgrading.</h3>'+
 			'<p>If you have any questions, please call（852）55690674.</p>');
