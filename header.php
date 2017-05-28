@@ -94,7 +94,7 @@
 <div class="main-content">
 	<?php if (is_home()): ?>
 		<div class="flex-container">
-			<?php echo do_shortcode("[slider id='7' name='banner图片' size='full']"); ?>
+			<?php echo do_shortcode("[slider id='8' name=\'首页图片轮播\' size=\'full\']"); ?>
 		</div>
 		<div class="company-slogan">
 		</div>
