@@ -18,11 +18,11 @@ function backFn() {
 }
 
 function hideAddThemeButton(){
-    var element = jQuery("a[href='http://wesberg.com.cn/wp-admin/theme-install.php']");
+    var element = jQuery("a[href='http://linkchina.hk/wp-admin/theme-install.php']");
     var eleParent = element.parent().get(0);
     jQuery(eleParent).hide();
 
-    var addSliderbtn = jQuery("a[href='http://wesberg.com.cn/wp-admin/post-new.php?post_type=ssp_slider']");
+    var addSliderbtn = jQuery("a[href='http://linkchina.hk/wp-admin/post-new.php?post_type=ssp_slider']");
     addSliderbtn.hide();
 }
 
