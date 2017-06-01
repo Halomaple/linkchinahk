@@ -9,16 +9,23 @@
 		</div><!--main-content-->
 
 		<div class="footer">
+			<div class="footer-separator"></div>
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-3 col-md-3 qr-code-container">
-						<div class="qr-code pull-right">
+					<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+						<div class="footer-brand text-gray">
+							<img src="<?php bloginfo('template_directory')?>/images/logo-white.png">
+							<h1>联华云</h1>
 						</div>
-						<div class="clearfix"></div>
 					</div>
 
-					<div class="col-xs-12 col-sm-9 col-md-9 address">
-					   
+					<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+						<div class="footer-contact">
+							<p>Tel : 0755-88824588</p>
+							<p>HK TEL : （852）55690674</p>
+							<p>ADD : 深圳市南山区白沙科技产业园1-8B、8V</p>
+							<p>HK Add:FLAT/RM A1,9/F SILVERCORP INTERNATIONAL TOWER 707-713 NATHAN ROAD</p>
+						</div>
 					</div>
 				</div>
 			</div>
