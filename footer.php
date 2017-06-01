@@ -12,14 +12,14 @@
 			<div class="footer-separator"></div>
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 						<div class="footer-brand text-gray">
 							<img src="<?php bloginfo('template_directory')?>/images/logo-white.png">
-							<h1>联华云</h1>
+							<h1><?php bloginfo('name');?></h1>
 						</div>
 					</div>
 
-					<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+					<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
 						<div class="footer-contact">
 							<p>Tel : 0755-88824588</p>
 							<p>HK TEL : （852）55690674</p>
@@ -52,5 +52,6 @@
 		<script src="//cdn.bootcss.com/flexslider/2.1/jquery.flexslider-min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/flexslider.min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/bootsnav.min.js"></script>
+		<script src="<?php bloginfo('template_directory'); ?>/js/language.js"></script>
 	</body>
 </html>

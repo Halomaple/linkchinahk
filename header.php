@@ -75,6 +75,16 @@
 										</span>
 									</div>
 								</form>
+								<div class="pull-right dropdown change-language">
+									<button class="btn btn-default dropdown-toggle" type="button" id='switchLanguage' data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+									<span class="caret pull-right"></span>
+									</button>
+									<ul class="dropdown-menu" aria-labelledby="switchLanguage">
+										<li><a href="#">简体</a></li>
+										<li><a href="#">繁体</a></li>
+										<li><a href="#">English</a></li>
+									</ul>
+								</div>
 								<?php wp_nav_menu(array(
 									'menu' => 'header_menu',
 									'theme_location' => 'header_menu',

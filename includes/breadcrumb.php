@@ -2,8 +2,8 @@
 if (is_single()) {
     ?>
     <ol class="breadcrumb">
-        当前位置&nbsp;>&nbsp;
-        <li><a title="返回首页" href="<?php echo site_url(); ?>/">首页</a></li>
+        Current&nbsp;>&nbsp;
+        <li><a title="Back to Home" href="<?php echo site_url(); ?>/">Home</a></li>
         <li class="current-position"><?php the_title() ?></li>
     </ol>
 <?php }
@@ -11,8 +11,8 @@ if (is_single()) {
 if (is_archive()) {
     ?>
     <div class="breadcrumb">
-        当前位置&nbsp;>&nbsp;
-        <li><a title="返回首页" href="<?php echo site_url(); ?>/">首页</a></li>
+        Current&nbsp;>&nbsp;
+        <li><a title="Back to Home" href="<?php echo site_url(); ?>/">Home</a></li>
 
         <li class="current-position"><?php if (is_category()) { ?><?php single_cat_title(); ?>
             <?php } elseif (is_tag()) { ?><?php single_tag_title(); ?>
@@ -30,15 +30,15 @@ if (is_archive()) {
 if (is_search()) {
     ?>
     <div class="breadcrumb">
-        当前位置&nbsp;>&nbsp;
-        <li><a title="返回首页" href="<?php echo site_url() ?>/">首页</a></li>
-        <li class="current-position">搜索结果</li>
+        Current&nbsp;>&nbsp;
+        <li><a title="Back to Home" href="<?php echo site_url() ?>/">Home</a></li>
+        <li class="current-position">Search Result</li>
 
         <div class="search-page-input">
         <form method="get" id="searchform" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <div class="input-group">
-                <input name="s" id="s" type="text" class="form-control" placeholder="重新搜索">
-                <span class="input-group-btn"><button class="btn btn-default" type="submit">搜索</button></span>
+                <input name="s" id="s" type="text" class="form-control" placeholder="Search again">
+                <span class="input-group-btn"><button class="btn btn-default" type="submit">Search</button></span>
             </div>
         </form>
         </div>
@@ -50,8 +50,8 @@ $has_zoom = true;
 if (is_page()) {
     ?>
     <ol class="breadcrumb">
-        当前位置&nbsp;>&nbsp;
-        <li><a title="返回首页" href="<?php echo site_url(); ?>/">首页</a></li>
+        Current&nbsp;>&nbsp;
+        <li><a title="Back to Home" href="<?php echo site_url(); ?>/">Home</a></li>
         <li class="current-position"><?php the_title() ?></li>
     </ol>
 <?php }
