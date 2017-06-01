@@ -9,7 +9,13 @@
 		</div><!--main-content-->
 
 		<div class="footer">
-			<div class="footer-separator"></div>
+			<div class="footer-separator">
+				<div class="container">
+					<div class="row">
+						<a class="totop text-white pointer" onclick="javascript:scrollToTop()">TOP</a>
+					</div>
+				</div>
+			</div>
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -46,6 +52,10 @@
 					'<p>If you have any questions, please call（852）55690674.</p>');
 			}
 			console.log('Your IP address is: ', returnCitySN['cip']);
+
+			function scrollToTop(){
+				$("html,body").animate({"scrollTop":0});
+			}
 		</script>
 
 		<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
