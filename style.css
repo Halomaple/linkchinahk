@@ -109,13 +109,13 @@ nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li > a:hover {
 	background: transparent;
 	box-shadow: none;
 }
-#switchLanguage .caret{
+#switchLanguage .caret {
 	margin-top: 10px;
 }
 .change-language {
 	display: none;
 }
-.change-language .dropdown-menu{
+.change-language .dropdown-menu {
 	text-align: right;
 	min-width: initial;
 	width: 100px;
@@ -236,6 +236,13 @@ nav.navbar.bootsnav.navbar-mobile .navbar-collapse.in ul.nav {
 	font-size: 13px;
 	background: #ececec;
 	color: #999;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.breadcrumb li{
+	padding-top: 9px;
+	padding-bottom: 9px;
 }
 .current-position {
 	color: #226abf;
@@ -282,6 +289,18 @@ nav.navbar.bootsnav.navbar-mobile .navbar-collapse.in ul.nav {
 	height: 160px;
 }
 
+/*Search*/
+.search-page-input {
+	display: inline-block;
+	max-width: 300px;
+}
+
+/*Post*/
+.blog-post-content img {
+	display: block;
+	margin: 0 auto;
+}
+
 /*Footer*/
 .footer {
 	background: #e4e4e4;
@@ -293,18 +312,16 @@ nav.navbar.bootsnav.navbar-mobile .navbar-collapse.in ul.nav {
 	background: #1a66b3;
 	margin-bottom: 40px;
 }
-.footer-separator .row{
+.footer-separator .row {
 	position: relative;
 }
-.footer-separator a.totop{
+.footer-separator a.totop {
 	position: absolute;
 	right: 20px;
 	top: 10px;
 	transition: .3s all ease-in-out;
 }
-.footer-separator a.totop:hover,
-.footer-separator a.totop:active,
-.footer-separator a.totop:focus{
+.footer-separator a.totop:hover, .footer-separator a.totop:active, .footer-separator a.totop:focus {
 	color: white;
 	transform: scale(1.2);
 }

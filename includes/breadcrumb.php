@@ -1,59 +1,44 @@
 <?php
 if (is_single()) {
-    ?>
-    <ol class="breadcrumb">
-        Current&nbsp;>&nbsp;
-        <li><a title="Back to Home" href="<?php echo site_url(); ?>/">Home</a></li>
-        <li class="current-position"><?php the_title() ?></li>
-    </ol>
+	?>
+	<ul class="breadcrumb">
+		<li>Current</li>
+		<li><a title="Back to Home" href="<?php echo site_url(); ?>/">Home</a></li>
+		<li class="current-position"><?php the_title() ?></li>
+	</ul>
 <?php }
 
 if (is_archive()) {
-    ?>
-    <div class="breadcrumb">
-        Current&nbsp;>&nbsp;
-        <li><a title="Back to Home" href="<?php echo site_url(); ?>/">Home</a></li>
-
-        <li class="current-position"><?php if (is_category()) { ?><?php single_cat_title(); ?>
-            <?php } elseif (is_tag()) { ?><?php single_tag_title(); ?>
-            <?php } elseif (is_day()) { ?><?php the_time('Y年m月'); ?>发表的文章
-            <?php } elseif (is_month()) { ?>所有<?php the_time('Y年m月'); ?>文章
-            <?php } elseif (is_year()) { ?>Archive for <?php the_time('Y'); ?>
-            <?php } elseif (is_author()) { ?><?php wp_title(''); ?>发表的所有文章
-            <?php } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
-                <h1>Blog Archives</h1>
-            <?php } ?>
-        </li>
-    </div>
+	?>
+	<ul class="breadcrumb">
+		<li>Current</li>
+		<li><a title="Back to Home" href="<?php echo site_url(); ?>/">Home</a></li>
+		<li class="current-position"><?php if (is_category()) { single_cat_title();} ?></li>
+	</ul>
 <?php }
 
 if (is_search()) {
-    ?>
-    <div class="breadcrumb">
-        Current&nbsp;>&nbsp;
-        <li><a title="Back to Home" href="<?php echo site_url() ?>/">Home</a></li>
-        <li class="current-position">Search Result</li>
-
-        <div class="search-page-input">
-        <form method="get" id="searchform" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-            <div class="input-group">
-                <input name="s" id="s" type="text" class="form-control" placeholder="Search again">
-                <span class="input-group-btn"><button class="btn btn-default" type="submit">Search</button></span>
-            </div>
-        </form>
-        </div>
-    </div>
+	?>
+	<ul class="breadcrumb clearfix">
+		<li>Current</li>
+		<li><a title="Back to Home" href="<?php echo site_url() ?>/">Home</a></li>
+		<li class="current-position">Search Result</li>
+		<div class="search-page-input pull-right">
+			<form method="get" id="searchform" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+				<div class="input-group">
+					<input name="s" id="s" type="text" class="form-control" placeholder="Search again">
+					<span class="input-group-btn"><button class="btn btn-default" type="submit">Search</button></span>
+				</div>
+			</form>
+		</div>
+	</ul>
 <?php }
 
-global $has_zoom;
-$has_zoom = true;
 if (is_page()) {
-    ?>
-    <ol class="breadcrumb">
-        Current&nbsp;>&nbsp;
-        <li><a title="Back to Home" href="<?php echo site_url(); ?>/">Home</a></li>
-        <li class="current-position"><?php the_title() ?></li>
-    </ol>
-<?php }
-?>
-
+	?>
+	<ul class="breadcrumb">
+		<li>Current</li>
+		<li><a title="Back to Home" href="<?php echo site_url(); ?>/">Home</a></li>
+		<li class="current-position"><?php the_title() ?></li>
+	</ul>
+<?php }?>
