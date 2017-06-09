@@ -346,13 +346,13 @@ input.wpcf7-form-control.wpcf7-file{
 .footer-separator .row {
 	position: relative;
 }
-.footer-separator a.totop {
+.footer-separator a.to-top {
 	position: absolute;
 	right: 20px;
 	top: 10px;
 	transition: .3s all ease-in-out;
 }
-.footer-separator a.totop:hover, .footer-separator a.totop:active, .footer-separator a.totop:focus {
+.footer-separator a.to-top:hover, .footer-separator a.to-top:active, .footer-separator a.to-top:focus {
 	color: white;
 	transform: scale(1.2);
 }

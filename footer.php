@@ -12,7 +12,7 @@
 			<div class="footer-separator">
 				<div class="container">
 					<div class="row">
-						<a class="totop text-white pointer" onclick="javascript:scrollToTop()">TOP</a>
+						<a class="to-top text-white pointer" id="totop">TOP</a>
 					</div>
 				</div>
 			</div>
@@ -54,10 +54,6 @@
 			}
 			console.log('Your IP address is: ', returnCitySN['cip']);
 
-			function scrollToTop(){
-				$("html,body").animate({"scrollTop":0});
-			}
-
 			recruitFormCustomization();
 
 			function recruitFormCustomization(){
@@ -70,6 +66,7 @@
 
 				$('.recruit-form-content > p > input[type="submit"]').addClass('btn btn-primary');
 			}
+
 		});
 		</script>
 
@@ -77,6 +74,7 @@
 		<script src="//cdn.bootcss.com/flexslider/2.1/jquery.flexslider-min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/flexslider.min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/bootsnav.min.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/language.js"></script>
+		<script src="<?php bloginfo('template_directory'); ?>/js/jquery.toTop.min.js"></script>
+		<!-- <script src="<?php bloginfo('template_directory'); ?>/js/language.js"></script> -->
 	</body>
 </html>
