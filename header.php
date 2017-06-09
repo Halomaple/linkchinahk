@@ -106,8 +106,6 @@
 				<div class="flex-container">
 					<?php echo do_shortcode("[slider id='8' name=\'首页图片轮播\' size=\'full\']"); ?>
 				</div>
-				<div class="company-slogan">
-				</div>
 			<?php endif ?>
 
 			<div class="container">
