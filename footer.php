@@ -43,7 +43,7 @@
 		<script type="text/javascript">
 			//limit ip access
 			var allowIPList = [
-				'183.11.129.101',
+				'113.118.234.76',
 				'103.72.166.84'
 			];
 			if(!returnCitySN["cip"] || allowIPList.indexOf(returnCitySN["cip"]) == -1){
