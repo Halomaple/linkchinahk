@@ -8,7 +8,7 @@ include(TEMPLATEPATH . '/includes/breadcrumb.php');
 ?>
 
 <div class="recruit-container">
-    <?php echo do_shortcode('[contact-form-7 id="15" title="联系表单 1"]')
+    <?php echo do_shortcode('[contact-form-7 id="15" title="招聘信息"]')
     ?>
 </div>
 

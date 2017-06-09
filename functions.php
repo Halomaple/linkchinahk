@@ -257,4 +257,8 @@ function custum_fontfamily($initArray)
 }
 
 add_filter('tiny_mce_before_init', 'custum_fontfamily');
+
+
+//禁止validation来允许contact-form7 表单的from 邮箱非本域名
+add_filter( 'wpcf7_validate_configuration', '__return_false' );
 ?>

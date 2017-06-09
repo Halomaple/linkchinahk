@@ -41,6 +41,7 @@
 		<script src="//cdn.bootcss.com/jquery/2.2.0/jquery.js"></script>
 		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 		<script type="text/javascript">
+		$(document).ready(function() {
 			//limit ip access
 			var allowIPList = [
 				'113.118.234.76',
@@ -56,6 +57,20 @@
 			function scrollToTop(){
 				$("html,body").animate({"scrollTop":0});
 			}
+
+			recruitFormCustomization();
+
+			function recruitFormCustomization(){
+				var replaceValueAndPlaceHodler = function(index, ele){
+					$(ele).attr('placeholder', $(ele).val());
+					$(ele).val(''); 
+				};
+				$('.recruit-form-content > p > span > input').each(replaceValueAndPlaceHodler);
+				$('.recruit-form-content > p > span > textarea').each(replaceValueAndPlaceHodler);
+
+				$('.recruit-form-content > p > input[type="submit"]').addClass('btn btn-primary');
+			}
+		});
 		</script>
 
 		<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

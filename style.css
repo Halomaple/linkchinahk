@@ -74,6 +74,16 @@ li {
 	color: white;
 }
 
+/*Overwritting Bootstrap styles*/
+.btn-primary{
+	background-color: #1a66b3;
+	border-color: #1a66b3;
+}
+.btn-primary:hover{
+	background-color: #2a76c3;
+	border-color: #2a76c3;
+}
+
 /* 2. Navbar */
 .top-navbar {
 	width: 100%;
@@ -239,8 +249,7 @@ nav.navbar.bootsnav.navbar-mobile .navbar-collapse.in ul.nav {
 	padding-top: 0;
 	padding-bottom: 0;
 }
-
-.breadcrumb li{
+.breadcrumb li {
 	padding-top: 9px;
 	padding-bottom: 9px;
 }
@@ -299,6 +308,28 @@ nav.navbar.bootsnav.navbar-mobile .navbar-collapse.in ul.nav {
 .blog-post-content img {
 	display: block;
 	margin: 0 auto;
+}
+
+/*Recruit*/
+.recruit-container {
+	padding: 100px 0;
+	text-align: center;
+}
+.recruit-form-content{
+	margin: 0 auto;
+}
+.recruit-form-content > p > span{
+	text-align: right;
+	display: inline-block;
+	min-width: 150px;
+	padding-right: 10px;
+}
+input.wpcf7-form-control.wpcf7-file{
+	margin: 10px auto;
+	display: block;
+}
+.screen-reader-response[role='alert'], .wpcf7-not-valid-tip[role='alert'], .wpcf7-validation-errors {
+	color: red;
 }
 
 /*Footer*/
