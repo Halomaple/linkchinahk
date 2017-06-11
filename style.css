@@ -63,6 +63,10 @@ li {
 	list-style: none;
 }
 
+/*Colors:
+1. blue:#1a66b3
+*/
+
 /*Helper classes*/
 .pointer {
 	cursor: pointer;
@@ -75,11 +79,11 @@ li {
 }
 
 /*Overwritting Bootstrap styles*/
-.btn-primary{
+.btn-primary {
 	background-color: #1a66b3;
 	border-color: #1a66b3;
 }
-.btn-primary:hover{
+.btn-primary:hover {
 	background-color: #2a76c3;
 	border-color: #2a76c3;
 }
@@ -304,8 +308,40 @@ nav.navbar.bootsnav.navbar-mobile .navbar-collapse.in ul.nav {
 	max-width: 300px;
 }
 
+/*Paging*/
+.wp-pagenavi {
+	float: right;
+	display: block;
+	width: auto;
+	padding: 5px 10px;
+}
+.wp-pagenavi > * {
+	margin: 0 5px;
+}
+.wp-pagenavi > span.pages{
+	border-radius: 4px;
+	padding: 5px 10px;
+}
+.wp-pagenavi > span.current{
+	background: #efefef;
+}
+.wp-pagenavi > span, .wp-pagenavi > a {
+	display: inline-block;
+	width: auto;
+	min-width: 30px;
+	height: 30px;
+	padding: 5px 0;
+	border-radius: 50%;
+	border: 1px solid #eee;
+	text-align: center;
+}
+.wp-pagenavi > a:hover {
+	border-color: #1a66b3;
+	box-shadow: 0 0 17px 1px #eee;
+}
+
 /*Post*/
-.blog-post-content{
+.blog-post-content {
 	border: 1px solid #eee;
 	padding: 15px 10px;
 }
@@ -315,20 +351,23 @@ nav.navbar.bootsnav.navbar-mobile .navbar-collapse.in ul.nav {
 }
 
 /*Recruit and contact*/
-.wpcf7{
+.wpcf7 {
 	padding: 100px 0;
 	text-align: center;
 }
-.contact-form-content{
+.contact-form-content {
 	margin: 0 auto;
 }
-.contact-form-content > p > span{
+.contact-form-content > p > span {
 	text-align: right;
 	display: inline-block;
 	min-width: 150px;
 	padding-right: 10px;
 }
-input.wpcf7-form-control.wpcf7-file{
+.contact-form-content > p > span > input{
+	margin-left: 10px;
+}
+input.wpcf7-form-control.wpcf7-file {
 	margin: 10px auto;
 	display: block;
 }
@@ -379,13 +418,11 @@ input.wpcf7-form-control.wpcf7-file{
 	flex-direction: column;
 	justify-content: center;
 }
-
-.footer-contact hr{
+.footer-contact hr {
 	margin: 10px 0 15px 0;
 }
-
-@media(min-width: 768px){
-	.footer-company-brand{
+@media(min-width:768px) {
+	.footer-company-brand {
 		margin-top: 100px;
 	}
 }

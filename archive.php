@@ -1,7 +1,7 @@
 <?php get_header();
 include(TEMPLATEPATH . '/includes/breadcrumb.php');
 ?>
-<div class="archive">
+<div class="archive clearfix">
 <?php while (have_posts()) : the_post(); ?>
 	<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3 pointer">
 		<div class="archive-post-item" onclick="window.location.href='<?php the_permalink(); ?>'">
@@ -37,6 +37,7 @@ include(TEMPLATEPATH . '/includes/breadcrumb.php');
 	</div>
 <?php endwhile;?>
 </div>
+<?php wp_pagenavi(); ?>
 
 <?php get_footer(); ?>
 
