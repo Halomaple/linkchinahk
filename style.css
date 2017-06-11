@@ -305,6 +305,10 @@ nav.navbar.bootsnav.navbar-mobile .navbar-collapse.in ul.nav {
 }
 
 /*Post*/
+.blog-post-content{
+	border: 1px solid #eee;
+	padding: 15px 10px;
+}
 .blog-post-content img {
 	display: block;
 	margin: 0 auto;
@@ -336,12 +340,13 @@ input.wpcf7-form-control.wpcf7-file{
 .footer {
 	background: #e4e4e4;
 	min-height: 300px;
+	padding-bottom: 30px;
 }
 .footer-separator {
 	width: 100%;
 	height: 40px;
 	background: #1a66b3;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 .footer-separator .row {
 	position: relative;
@@ -373,4 +378,14 @@ input.wpcf7-form-control.wpcf7-file{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.footer-contact hr{
+	margin: 10px 0 15px 0;
+}
+
+@media(min-width: 768px){
+	.footer-company-brand{
+		margin-top: 100px;
+	}
 }

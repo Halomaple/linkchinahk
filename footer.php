@@ -18,7 +18,7 @@
 			</div>
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 footer-company-brand">
 						<div class="footer-brand text-gray">
 							<img src="<?php bloginfo('template_directory')?>/images/logo-white.png">
 							<h1><?php bloginfo('name');?></h1>
@@ -27,10 +27,15 @@
 
 					<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
 						<div class="footer-contact">
-							<p>Tel : 0755-88824588</p>
-							<p>HK TEL : （852）55690674</p>
-							<p>ADD : 深圳市南山区白沙科技产业园1-8B、8V</p>
-							<p>HK Add:FLAT/RM A1,9/F SILVERCORP INTERNATIONAL TOWER 707-713 NATHAN ROAD</p>
+							<p>TEL : (852)55690674</p>
+							<p>E-mail : <a href="mailto:cs@linkchina.com.cn">cs@linkchina.com.cn</a></p>
+							<p>Website : <a href="http://www.linkchina.hk/">linkchina.hk</a></p>
+							<p>Address : FLAT/RM A1,9/F SILVERCORP INTERNATIONAL TOWER 707-713 NATHAN ROAD,MONGKOK,HONG KONG</p>
+							<hr />
+							<p>Tel : (0755)88824588</p>
+							<p>E-mail : <a href="mailto:cs@linkchina.com.cn">cs@linkchina.com.cn</a></p>
+							<p>Website: <a href="http://www.linkchina.com.cn/">www.linkchina.com.cn</a></p>
+							<p>ADD : 深圳市南山区沙河西路3011号白沙科技产业园1栋8楼B-V区</p>
 						</div>
 					</div>
 				</div>
