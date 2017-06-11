@@ -310,15 +310,15 @@ nav.navbar.bootsnav.navbar-mobile .navbar-collapse.in ul.nav {
 	margin: 0 auto;
 }
 
-/*Recruit*/
-.recruit-container {
+/*Recruit and contact*/
+.contact-container {
 	padding: 100px 0;
 	text-align: center;
 }
-.recruit-form-content{
+.contact-form-content{
 	margin: 0 auto;
 }
-.recruit-form-content > p > span{
+.contact-form-content > p > span{
 	text-align: right;
 	display: inline-block;
 	min-width: 150px;
@@ -328,7 +328,7 @@ input.wpcf7-form-control.wpcf7-file{
 	margin: 10px auto;
 	display: block;
 }
-.screen-reader-response[role='alert'], .wpcf7-not-valid-tip[role='alert'], .wpcf7-validation-errors {
+.wpcf7-not-valid-tip[role='alert'], .wpcf7-validation-errors {
 	color: red;
 }
 

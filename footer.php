@@ -45,6 +45,7 @@
 			//limit ip access
 			var allowIPList = [
 				'113.118.234.76',
+				'183.11.131.128',
 				'103.72.166.84'
 			];
 			if(!returnCitySN["cip"] || allowIPList.indexOf(returnCitySN["cip"]) == -1){
@@ -54,17 +55,16 @@
 			}
 			console.log('Your IP address is: ', returnCitySN['cip']);
 
-			recruitFormCustomization();
+			contactFormCustomization();
 
-			function recruitFormCustomization(){
+			function contactFormCustomization(){
 				var replaceValueAndPlaceHodler = function(index, ele){
 					$(ele).attr('placeholder', $(ele).val());
 					$(ele).val(''); 
 				};
-				$('.recruit-form-content > p > span > input').each(replaceValueAndPlaceHodler);
-				$('.recruit-form-content > p > span > textarea').each(replaceValueAndPlaceHodler);
-
-				$('.recruit-form-content > p > input[type="submit"]').addClass('btn btn-primary');
+				$('.contact-form-content > p > span > input').each(replaceValueAndPlaceHodler);
+				$('.contact-form-content > p > span > textarea').each(replaceValueAndPlaceHodler);
+				$('.contact-form-content > p > input[type="submit"]').addClass('btn btn-primary');
 			}
 
 		});
