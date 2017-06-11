@@ -365,6 +365,7 @@ nav.navbar.bootsnav.navbar-mobile .navbar-collapse.in ul.nav {
 	padding-right: 10px;
 }
 .contact-form-content > p > span > input{
+	max-width: 100%;
 	margin-left: 10px;
 }
 input.wpcf7-form-control.wpcf7-file {
@@ -373,6 +374,11 @@ input.wpcf7-form-control.wpcf7-file {
 }
 .wpcf7-not-valid-tip[role='alert'], .wpcf7-validation-errors {
 	color: red;
+}
+@media(max-width: 480px){
+	.contact-form-content > p > span {
+		text-align: center;
+	}
 }
 
 /*Footer*/
