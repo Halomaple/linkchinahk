@@ -1,6 +1,4 @@
 <?php get_header();
-
-include(TEMPLATEPATH . '/includes/part-page-nav.php');
 include(TEMPLATEPATH . '/includes/breadcrumb.php'); ?>
 <div class="content-container col-xs-12 col-sm-12 col-lg-12">
 	<h3>Result: <?php echo get_search_query(); ?></h3>
