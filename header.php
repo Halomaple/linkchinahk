@@ -54,7 +54,7 @@
 		<header class="top-navbar">
 			<div class="container">
 				<div class="row">
-					<nav class="navbar navbar-default navbar-mobile bootsnav">
+					<nav class="navbar navbar-fixed navbar-mobile bootsnav">
 						<div class="container">
 							<div class="navbar-header">
 								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
