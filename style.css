@@ -109,8 +109,8 @@ li {
 
 /*Overwritting Bootstrap styles*/
 .btn-primary {
-	background-color: #1a66b3;
-	border-color: #1a66b3;
+	background-color: #2a76c3;
+	border-color: #2a76c3;
 }
 
 .btn-primary:hover {
@@ -119,7 +119,8 @@ li {
 }
 
 /* 2. Navbar */
-.top-navbar {
+.top-navbar,
+.top-navbar > .container {
 	width: 100%;
 }
 
@@ -140,16 +141,16 @@ nav.navbar.bootsnav i.glyphicon-search {
 }
 
 nav.navbar.bootsnav ul.nav > li > a:hover {
-	color: #1a66b3;
+	color: #2a76c3;
 }
 
 nav.navbar.bootsnav li.dropdown ul.dropdown-menu {
 	border-radius: 4px;
-	border-top-color: #1a66b3;
+	border-top-color: #2a76c3;
 }
 
 nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li > a:hover {
-	color: #1a66b3;
+	color: #2a76c3;
 }
 
 #switchLanguage {
@@ -188,22 +189,38 @@ nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li > a:hover {
 	max-width: 200px;
 }
 
-.input-group .form-control.search-input-box {
-	display: none;
+.search-form .form-control.search-input-box {
+	background: transparent;
+	color: white;
 }
 
-.input-group .form-control.search-input-box.collapse.in {
+.search-form input.form-control.search-input-box::-webkit-input-placeholder {
+	color: white;
+}
+
+.search-form input.form-control.search-input-box::-moz-placeholder {
+	color: white;
+}
+
+.search-form input.form-control.search-input-box:-ms-input-placeholder {
+	color: white;
+}
+
+.search-form .form-control.search-input-box.collapse.in {
 	display: table-cell;
 }
 
-.btn.search-button {
+.btn.search-button,
+.btn.search-button:hover,
+.btn.search-button:focus,
+.btn.search-button:active {
+	border-color: #ccc;
+	box-shadow: none;
 	background: transparent;
-	border: none;
 }
 
 .search-button[aria-expanded=true] {
-	background-color: #fff;
-	border: 1px solid #ccc;
+	border: 1px solid #fff;
 }
 
 /*Navbar on mobile*/
@@ -341,6 +358,18 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 	margin: 15px;
 }
 
+.flex-direction-nav .flex-prev {
+	left: 5px !important;
+}
+
+.flex-direction-nav .flex-next {
+	right: 5px !important;
+}
+
+.flex-control-nav li {
+	transform: scale(1.5);
+}
+
 /*Section title */
 .sec-title {
 	margin-bottom: 50px;
@@ -417,12 +446,18 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 /*Main Content*/
 .main-content {
 	margin: 0;
-	padding: 0 0 50px;
 	min-height: 800px;
 }
 
 .main-content > .container {
-	padding-top: 20px;
+	padding-top: calc(80px + 20px);
+}
+
+@media(max-width:768px) {
+	.main-content > .container {
+		padding-top: calc(54px + 20px);
+	}
+
 }
 
 /*Company boxes*/

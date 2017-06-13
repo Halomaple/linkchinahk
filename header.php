@@ -16,7 +16,7 @@
 				bloginfo('name');
 				echo '';
 			} elseif (is_404()) {
-				echo '未找到&nbsp;|&nbsp;';
+				echo 'Not found &nbsp;|&nbsp;';
 				bloginfo('name');
 			} else {
 				wp_title('', true);
@@ -69,9 +69,9 @@
 							<div id="navbar" class="collapse navbar-collapse">
 								<form method="get" class="search-form" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 									<div class="input-group">
-										<input name="s" id="search-input" type="text" class="form-control search-input-box" placeholder="搜索">
+										<input name="s" id="search-input" type="text" class="form-control search-input-box" placeholder="Search">
 										<span class="input-group-btn">
-											<button type="button" class="btn btn-default search-button" data-toggle="collapse" data-target="#search-input" aria-expanded="false" aria-controls="search-input">
+											<button type="submit" class="btn btn-default search-button">
 												<i class="glyphicon glyphicon-search">
 												</i>
 											</button>

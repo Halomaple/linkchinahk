@@ -76,11 +76,7 @@
 				}
 				// Flexslider Height
 				var slideHeight = $(window).height();
-				$('.flex-container, .flexslider, .flex-viewport, .slides, .slide img').css('height', slideHeight);
-
-				$(window).resize(function() {
-					$('#home-slider, #slider, .sl-slider, .sl-content-wrapper').css('height', slideHeight);
-				});
+				$('.flex-container, .flexslider, .flex-viewport, .slides, .slide img').css('height', slideHeight + 80);
 			});
 		</script>
 	</body>
