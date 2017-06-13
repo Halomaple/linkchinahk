@@ -110,3 +110,5 @@
 					<?php echo do_shortcode("[slider id='8' name=\'首页图片轮播\' size=\'full\']"); ?>
 				</div>
 			<?php endif ?>
+			<div class="container">
+				<div class="row">

@@ -1,6 +1,5 @@
 <?php get_header(); ?>
-		<div class="container">
-			<div class="row">
+		
 				<section id="service">
 					<div class="container">
 						<div class="row">
@@ -51,6 +50,4 @@
 						</div>
 					</div>
 				</section>
-			</div><!--/row-->
-		</div><!--/container-->
 <?php get_footer(); ?>
