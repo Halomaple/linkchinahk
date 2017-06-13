@@ -22,7 +22,8 @@
 				wp_title('', true);
 			} ?></title>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
 		<?php if (is_search()) { ?>
 		<meta name='robots' content='nofollow'/>
 		<?php } else { ?>
@@ -41,6 +42,8 @@
 
 		<!-- Flexslider CSS -->
 		<link href="//cdn.bootcss.com/flexslider/2.1/flexslider-min.css" rel="stylesheet"/>
+		<!-- Font-Awesome -->
+		<link href="//cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 		<!--Customized css-->
 		<link href="<?php bloginfo('template_directory'); ?>/css/bootsnav.css" rel="stylesheet"/>
@@ -48,7 +51,7 @@
 	</head>
 
 	<body>
-		<div class="top-navbar">
+		<header class="top-navbar">
 			<div class="container">
 				<div class="row">
 					<nav class="navbar navbar-default navbar-mobile bootsnav">
@@ -99,7 +102,7 @@
 					</nav>
 				</div>
 			</div>
-		</div>
+		</header>
 
 		<div class="main-content">
 			<?php if (is_home()): ?>
@@ -107,6 +110,3 @@
 					<?php echo do_shortcode("[slider id='8' name=\'首页图片轮播\' size=\'full\']"); ?>
 				</div>
 			<?php endif ?>
-
-			<div class="container">
-				<div class="row">

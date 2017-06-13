@@ -4,10 +4,7 @@
  *
  */
 ?>
-				</div><!--/row-->
-			</div><!--/container main-content-->
-		</div><!--main-content-->
-
+	</div><!--main-content-->
 		<div class="footer">
 			<div class="footer-separator">
 				<div class="container">
@@ -45,41 +42,44 @@
 		<!--JavaScript-->
 		<script src="//cdn.bootcss.com/jquery/2.2.0/jquery.js"></script>
 		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
-		<script type="text/javascript">
-		$(document).ready(function() {
-			//limit ip access
-			var allowIPList = [
-				'113.118.234.76',
-				'183.11.131.128',
-				'103.72.166.84'
-			];
-			if(!returnCitySN["cip"] || allowIPList.indexOf(returnCitySN["cip"]) == -1){
-				$('body').empty();
-				$('body').append('<h3>LinkChina HK is upgrading.</h3>'+
-					'<p>If you have any questions, please call（852）55690674.</p>');
-			}
-			console.log('Your IP address is: ', returnCitySN['cip']);
-
-			contactFormCustomization();
-
-			function contactFormCustomization(){
-				var replaceValueAndPlaceHodler = function(index, ele){
-					$(ele).attr('placeholder', $(ele).val());
-					$(ele).val(''); 
-				};
-				$('.contact-form-content > p > span > input').each(replaceValueAndPlaceHodler);
-				$('.contact-form-content > p > span > textarea').each(replaceValueAndPlaceHodler);
-				$('.contact-form-content > p > input[type="submit"]').addClass('btn btn-primary');
-			}
-
-		});
-		</script>
 
 		<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="//cdn.bootcss.com/flexslider/2.1/jquery.flexslider-min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/flexslider.min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/bootsnav.min.js"></script>
+		<script src="<?php bloginfo('template_directory'); ?>/js/jquery.singlePageNav.min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/jquery.toTop.min.js"></script>
 		<!-- <script src="<?php bloginfo('template_directory'); ?>/js/language.js"></script> -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//limit ip access
+				var allowIPList = ['113.118.234.76', '113.118.235.73', '183.11.131.128', '103.72.166.84'];
+
+				if (!returnCitySN["cip"] || allowIPList.indexOf(returnCitySN["cip"]) == -1) {
+					$('body').empty();
+					$('body').append('<h3>LinkChina HK is upgrading.</h3>' +
+						'<p>If you have any questions, please call（852）55690674.</p>');
+				}
+				console.log('Your IP address is: ', returnCitySN['cip']);
+				contactFormCustomization();
+
+				function contactFormCustomization() {
+					var replaceValueAndPlaceHodler = function(index, ele) {
+						$(ele).attr('placeholder', $(ele).val());
+						$(ele).val('');
+					};
+					$('.contact-form-content > p > span > input').each(replaceValueAndPlaceHodler);
+					$('.contact-form-content > p > span > textarea').each(replaceValueAndPlaceHodler);
+					$('.contact-form-content > p > input[type="submit"]').addClass('btn btn-primary');
+				}
+				// Flexslider Height
+				var slideHeight = $(window).height();
+				$('.flex-container, .flexslider, .flex-viewport, .slides, .slide img').css('height', slideHeight);
+
+				$(window).resize(function() {
+					$('#home-slider, #slider, .sl-slider, .sl-content-wrapper').css('height', slideHeight);
+				});
+			});
+		</script>
 	</body>
 </html>
