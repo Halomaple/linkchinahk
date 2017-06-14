@@ -173,7 +173,8 @@ nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li > a:hover {
 }
 
 .change-language {
-	display: none;
+
+	/*display: none;*/
 }
 
 .change-language .dropdown-menu {

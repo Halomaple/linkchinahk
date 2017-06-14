@@ -1,171 +1,186 @@
 /*Hide update*/
 .update-nag {
-    display: none;
+	display: none;
 }
 
 .wp-first-item .wp-submenu.wp-submenu-wrap {
-    display: none !important;
+	display: none !important;
 }
 
 #wpfooter {
-    display: none;
+	display: none;
 }
 
 /*Hide right top help button*/
 #contextual-help-link-wrap {
-    display: none;
+	display: none;
 }
 
 /*Hide right top options*/
 #screen-options-link-wrap {
-    display: none;
+	display: none;
 }
 
 /*Slide useless element*/
 #ssp-col-right {
-    display: none !important;
+	display: none !important;
 }
 
 #ssp_slider_options_metabox {
-    display: none !important;
+	display: none !important;
 }
 
 #ssp-col-left {
-    margin: 0;
+	margin: 0;
 }
 
 /*Hide WP updates*/
 #wp-admin-bar-updates {
-    display: none;
+	display: none;
 }
 
 /*Hide WP news*/
 #dashboard_primary.postbox {
-    display: none;
+	display: none;
 }
 
 /*Hide warning notice*/
 .notice.notice-warning.is-dismissible {
-    display: none;
+	display: none;
 }
 
 /*Hide dashboard*/
 #menu-dashboard ul li:nth-child(2),
 #menu-dashboard ul li:nth-child(3) {
-    display: none;
+	display: none;
 }
 
 #wp-version-message {
-    display: none;
+	display: none;
 }
 
 /*Hide customize theme btn*/
 .active-theme a:nth-child(1) {
-    display: none;
+	display: none;
 }
 
 /*Hide pages*/
 #menu-pages {
-    /*display: none;*/
+
+	/*display: none;*/
 }
 
 /*Hide delete menu button*/
 .submitdelete.deletion.menu-delete {
-    display: none;
+	display: none;
 }
 
 /*Hide auto add pages to menu*/
 .auto-add-pages {
-    display: none;
+	display: none;
 }
 
 /*Hide appearance*/
 #menu-appearance ul li:nth-child(2),
 #menu-appearance ul li:nth-child(3),
 #menu-appearance ul li:nth-child(5) {
-    display: none;
+	display: none;
 }
 
 /*Hide commments*/
 #menu-comments {
-    display: none;
+	display: none;
 }
 
 /*Hide plugins*/
 #menu-plugins {
-    display: none;
+	display: none;
 }
 
 /*Hide Users*/
 #menu-users {
-    display: none;
+	display: none;
 }
 
 /*Hide tools*/
 #menu-tools {
-    display: none;
+	display: none;
 }
 
 /*Hide 超级留言板updated*/
 #message.updated {
-    display: none;
+	display: none;
 }
 
 /*Hide settings*/
 #menu-settings {
-    display: none;
+	display: none;
 }
 
 /*Hide Contact Form Unnecessary*/
 #toplevel_page_wpcf7 > ul > li:nth-child(4) {
-    display: none;
+	display: none;
 }
 
 #informationdiv {
-    display: none;
+	display: none;
 }
 
 #poststuff .inside .description {
-    display: none;
+	display: none;
 }
 
 /*All in one seo*/
 #toplevel_page_all-in-one-seo-pack-aioseop_class {
-    display: none;
+	display: none;
 }
 
 /*Custom field*/
 .acf-column-2 {
-    display: none;
+	display: none;
 }
 
 #toplevel_page_edit-post_type-acf ul li:nth-child(4) {
-    display: none;
+	display: none;
 }
 
 /*Hide wp slide short code*/
 #ssp_shortcode_meta_box {
-    display: none;
+	display: none;
 }
 
 /*Hide wp attachment column in media gallery*/
 .column-downloads_count {
-    display: none;
+	display: none;
 }
 
 .column-comments {
-    display: none;
+	display: none;
 }
 
 .column-wpattachments_parent {
-    display: none;
+	display: none;
 }
 
 .column-wpa-download {
-    display: none;
+	display: none;
 }
 
 /*Hide delete slider btn*/
-.type-ssp_slider span.trash{
-    display: none;
+.type-ssp_slider span.trash {
+	display: none;
+}
+
+/*Hide multiple language*/
+.toplevel_page_mltlngg_settings {
+	display: none;
+}
+
+/*Hide add language link*/
+.mltlngg-nav-tab-wrapper a.mltlngg_add {
+	display: none;
+}
+
+.mce-toolbar .mce-btn-group .mce-btn.mce-bws_shortcode_button {
+	display: none;
 }
