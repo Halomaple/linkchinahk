@@ -4,8 +4,6 @@
  *
  */
 ?>
-				</div><!--/row-->
-			</div><!--/container-->
 		</div><!--main-content-->
 		<div class="footer">
 			<div class="footer-separator">
