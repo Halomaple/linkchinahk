@@ -53,7 +53,7 @@
 		<script type="text/javascript">
 			$(document).ready(function() {
 				//limit ip access
-				var allowIPList = ['113.89.99.11', '103.44.62.144', '183.2.185.59'];
+				var allowIPList = ['103.44.62.144', '183.2.185.59', '14.20.89.94'];
 
 				if (!returnCitySN["cip"] || allowIPList.indexOf(returnCitySN["cip"]) == -1) {
 					$('body').empty();
