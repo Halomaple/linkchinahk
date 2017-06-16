@@ -33,7 +33,16 @@
 		<meta name="keywords" content=""/>
 		<meta name="description" content=""/>
 		<meta name="author" content="Jeff Doyle"/>
-		<meta name="Copyright" content="本站创作权权归Jeff.Doyle个人所有"/>
+		<meta name="Copyright" content="本站创作权权归Halomaple个人所有"/>
+
+		<script type="text/javascript">
+			//temp
+			if(window.location.href == 'http://linkchina.hk/en_US/'
+				|| window.location.href == 'http://linkchina.hk/zh_CN/'
+				|| window.location.href == 'http://linkchina.hk/zh_HK/'){
+				window.location.href = window.location.href + 'home';
+			}
+		</script>
 
 		<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico"/>
 
