@@ -56,7 +56,7 @@
 
 		<!--Customized css-->
 		<link href="<?php bloginfo('template_directory'); ?>/css/bootsnav.css" rel="stylesheet"/>
-		<link href="<?php bloginfo('template_directory'); ?>/style.css" rel="stylesheet"/>
+		<link href="<?php bloginfo('template_directory'); ?>/style.css?v=1.0" rel="stylesheet"/>
 	</head>
 
 	<body>

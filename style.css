@@ -140,6 +140,13 @@ nav.navbar.bootsnav i.glyphicon-search {
 	color: white;
 }
 
+nav.navbar.bootsnav li a:hover,
+nav.navbar.bootsnav li a:focus,
+nav.navbar.bootsnav li a:active, 
+nav.navbar.bootsnav li a:visited {
+	background: transparent;
+}
+
 nav.navbar.bootsnav ul.nav > li > a:hover {
 	color: #2a76c3;
 }
