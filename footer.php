@@ -53,7 +53,7 @@
 		<script type="text/javascript">
 			$(document).ready(function() {
 				//limit ip access
-				var allowIPList = ['113.118.234.76', '113.118.235.73', '183.11.131.128', '103.72.166.84','113.89.99.11'];
+				var allowIPList = ['113.89.99.11', '103.44.62.144', '183.2.185.59'];
 
 				if (!returnCitySN["cip"] || allowIPList.indexOf(returnCitySN["cip"]) == -1) {
 					$('body').empty();
@@ -75,6 +75,13 @@
 				// Flexslider Height
 				var slideHeight = $(window).height();
 				$('.flex-container, .flexslider, .flex-viewport, .slides, .slide img').css('height', slideHeight + 80);
+
+
+				//Change 香港，中国 to 繁体，简体
+				$('.mltlngg-menu-item-current > a').text($('.mltlngg-menu-item-current > a').text().replace('香港', '繁体'));
+				$('.mltlngg-menu-item-current > a').text($('.mltlngg-menu-item-current > a').text().replace('中国', '简体'));
+				$('.menu-item-231-zh_HK a').text($('.menu-item-231-zh_HK a').text().replace('香港', '繁体'));
+				$('.menu-item-231-zh_CN a').text($('.menu-item-231-zh_CN a').text().replace('中国', '简体'));
 			});
 		</script>
 	</body>
