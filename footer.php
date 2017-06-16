@@ -73,9 +73,11 @@
 					$('.contact-form-content > p > input[type="submit"]').addClass('btn btn-primary');
 				}
 				// Flexslider Height
-				var slideHeight = $(window).height();
-				$('.flex-container, .flexslider, .flex-viewport, .slides, .slide img').css('height', slideHeight + 80);
+				$('.flex-container, .flexslider, .flex-viewport, .slides, .slide, .slide img').css('height', $(window).height() + 80);
 
+				$(window).on('resize', function(){
+					$('.flex-container, .flexslider, .flex-viewport, .slides, .slide, .slide img').css('height', $(window).height() + 80);
+				});
 
 				//Change 香港，中国 to 繁体，简体
 				$('.mltlngg-menu-item-current > a').text($('.mltlngg-menu-item-current > a').text().replace('香港', '繁体'));

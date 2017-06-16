@@ -343,6 +343,30 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 	max-height: none;
 }
 
+.flexslider .flex-active-slide{
+	position: relative;
+}
+
+.flexslider .flex-active-slide .flex-caption {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.flexslider .flex-active-slide .flex-caption a strong{
+	color: white;
+	font-size: 4em;
+	font-weight: 300;
+	letter-spacing: 0px;
+}
+
+@media(max-width: 768px){
+	.flexslider .flex-active-slide .flex-caption a strong{
+		font-size: 1.8em;
+	}
+}
+
 .flexslider .slides img {
 	background-position: center center;
 	background-repeat: no-repeat;
