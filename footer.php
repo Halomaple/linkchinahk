@@ -52,16 +52,27 @@
 		<!-- <script src="<?php bloginfo('template_directory'); ?>/js/language.js"></script> -->
 		<script type="text/javascript">
 			$(document).ready(function() {
-				//limit ip access
-				var allowIPList = ['103.44.62.144', '183.2.185.59', '14.20.89.94'];
 
-				if (!returnCitySN["cip"] || allowIPList.indexOf(returnCitySN["cip"]) == -1) {
-					$('body').empty();
-					$('body').append('<h3>LinkChina HK is upgrading.</h3>' +
-						'<p>If you have any questions, please call（852）55690674.</p>');
+				init();
+
+				function init(){
+					logIp();
+					contactFormCustomization();
+					adjustFlexSliderHeight();
+					changeNavigationLanguageText();
 				}
-				console.log('Your IP address is: ', returnCitySN['cip']);
-				contactFormCustomization();
+
+				function logIp(){
+					//limit ip access
+					var allowIPList = ['103.44.62.144', '183.2.185.59', '14.20.91.103'];
+
+					if (!returnCitySN["cip"] || allowIPList.indexOf(returnCitySN["cip"]) == -1) {
+						$('body').empty();
+						$('body').append('<h3>LinkChina HK is upgrading.</h3>' +
+							'<p>If you have any questions, please call（852）55690674.</p>');
+					}
+					console.log('Your IP address is: ', returnCitySN['cip']);
+				}
 
 				function contactFormCustomization() {
 					var replaceValueAndPlaceHodler = function(index, ele) {
@@ -72,18 +83,23 @@
 					$('.contact-form-content > p > span > textarea').each(replaceValueAndPlaceHodler);
 					$('.contact-form-content > p > input[type="submit"]').addClass('btn btn-primary');
 				}
-				// Flexslider Height
-				$('.flex-container, .flexslider, .flex-viewport, .slides, .slide, .slide img').css('height', $(window).height() + 80);
-
-				$(window).on('resize', function(){
+				
+				function adjustFlexSliderHeight(){
+					// Flexslider Height
 					$('.flex-container, .flexslider, .flex-viewport, .slides, .slide, .slide img').css('height', $(window).height() + 80);
-				});
 
-				//Change 香港，中国 to 繁体，简体
-				$('.mltlngg-menu-item-current > a').text($('.mltlngg-menu-item-current > a').text().replace('香港', '繁体'));
-				$('.mltlngg-menu-item-current > a').text($('.mltlngg-menu-item-current > a').text().replace('中国', '简体'));
-				$('.menu-item-231-zh_HK a').text($('.menu-item-231-zh_HK a').text().replace('香港', '繁体'));
-				$('.menu-item-231-zh_CN a').text($('.menu-item-231-zh_CN a').text().replace('中国', '简体'));
+					$(window).on('resize', function(){
+						$('.flex-container, .flexslider, .flex-viewport, .slides, .slide, .slide img').css('height', $(window).height() + 80);
+					});
+				}
+
+				function changeNavigationLanguageText(){
+					//Change 香港，中国 to 繁体，简体
+					$('.mltlngg-menu-item-current > a').text($('.mltlngg-menu-item-current > a').text().replace('香港', '繁体'));
+					$('.mltlngg-menu-item-current > a').text($('.mltlngg-menu-item-current > a').text().replace('中国', '简体'));
+					$('.menu-item-231-zh_HK a').text($('.menu-item-231-zh_HK a').text().replace('香港', '繁体'));
+					$('.menu-item-231-zh_CN a').text($('.menu-item-231-zh_CN a').text().replace('中国', '简体'));
+				}
 			});
 		</script>
 	</body>
