@@ -55,14 +55,15 @@
 
 				init();
 
-				function init(){
+				function init() {
 					logIp();
 					contactFormCustomization();
 					adjustFlexSliderHeight();
 					changeNavigationLanguageText();
+					changePlaceholderInSearchBoxAccordingToSelectedLanguage();
 				}
 
-				function logIp(){
+				function logIp() {
 					//limit ip access
 					var allowIPList = ['103.44.62.144', '183.2.185.59', '14.20.91.103'];
 
@@ -83,22 +84,30 @@
 					$('.contact-form-content > p > span > textarea').each(replaceValueAndPlaceHodler);
 					$('.contact-form-content > p > input[type="submit"]').addClass('btn btn-primary');
 				}
-				
-				function adjustFlexSliderHeight(){
+
+				function adjustFlexSliderHeight() {
 					// Flexslider Height
 					$('.flex-container, .flexslider, .flex-viewport, .slides, .slide, .slide img').css('height', $(window).height() + 80);
 
-					$(window).on('resize', function(){
+					$(window).on('resize', function() {
 						$('.flex-container, .flexslider, .flex-viewport, .slides, .slide, .slide img').css('height', $(window).height() + 80);
 					});
 				}
 
-				function changeNavigationLanguageText(){
+				function changeNavigationLanguageText() {
 					//Change 香港，中国 to 繁体，简体
 					$('.mltlngg-menu-item-current > a').text($('.mltlngg-menu-item-current > a').text().replace('香港', '繁体'));
 					$('.mltlngg-menu-item-current > a').text($('.mltlngg-menu-item-current > a').text().replace('中国', '简体'));
 					$('.menu-item-231-zh_HK a').text($('.menu-item-231-zh_HK a').text().replace('香港', '繁体'));
 					$('.menu-item-231-zh_CN a').text($('.menu-item-231-zh_CN a').text().replace('中国', '简体'));
+				}
+
+				function changePlaceholderInSearchBoxAccordingToSelectedLanguage() {
+					if (window.location.href.indexOf('/en_US') == -1) {
+						$('.search-input-box').attr({
+							placeholder: '搜索',
+						});
+					}
 				}
 			});
 		</script>
