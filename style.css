@@ -118,10 +118,19 @@ li {
 	border-color: #2a76c3;
 }
 
-@media(max-width: 992px){
-	.container{
+@media(max-width:992px) {
+	.container {
 		width: 100%;
 	}
+
+}
+
+.panel-primary {
+	border-color: #1a66b3;
+}
+
+.panel-primary .panel-heading {
+	background: #1a66b3;
 }
 
 /* 2. Navbar */
@@ -148,7 +157,7 @@ nav.navbar.bootsnav i.glyphicon-search {
 
 nav.navbar.bootsnav li a:hover,
 nav.navbar.bootsnav li a:focus,
-nav.navbar.bootsnav li a:active, 
+nav.navbar.bootsnav li a:active,
 nav.navbar.bootsnav li a:visited {
 	background: transparent;
 }
@@ -349,7 +358,7 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 	max-height: none;
 }
 
-.flexslider .flex-active-slide{
+.flexslider .flex-active-slide {
 	position: relative;
 }
 
@@ -363,23 +372,25 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 	word-break: break-word;
 }
 
-.flexslider .flex-active-slide .flex-caption a strong{
+.flexslider .flex-active-slide .flex-caption a strong {
 	color: white;
 	font-size: 4em;
 	font-weight: 300;
 	letter-spacing: 0px;
 }
 
-@media(max-width: 768px){
-	.flexslider .flex-active-slide .flex-caption a strong{
+@media(max-width:768px) {
+	.flexslider .flex-active-slide .flex-caption a strong {
 		font-size: 2.5em;
 	}
+
 }
 
-@media(max-width: 500px){
-	.flexslider .flex-active-slide .flex-caption a strong{
+@media(max-width:500px) {
+	.flexslider .flex-active-slide .flex-caption a strong {
 		font-size: 1.8em;
 	}
+
 }
 
 .flexslider .slides img {
@@ -646,6 +657,18 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 	display: block;
 	margin: 0 auto;
 	max-width: 100%;
+}
+
+/*Server*/
+.configuration-panel a.btn {
+	float: left;
+	min-width: 100px;
+	border-radius: 0;
+}
+
+.total-price {
+	font-size: 1.1em;
+	margin: 0 10px;
 }
 
 /*Recruit and contact*/
