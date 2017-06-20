@@ -350,8 +350,10 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 .flexslider .flex-active-slide .flex-caption {
 	position: absolute;
 	top: 50%;
-	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
+	transform: translateY(-50%);
+	width: 100%;
+	display: inline-block;
+	text-align: center;
 }
 
 .flexslider .flex-active-slide .flex-caption a strong{
@@ -362,6 +364,12 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 }
 
 @media(max-width: 768px){
+	.flexslider .flex-active-slide .flex-caption a strong{
+		font-size: 2.5em;
+	}
+}
+
+@media(max-width: 500px){
 	.flexslider .flex-active-slide .flex-caption a strong{
 		font-size: 1.8em;
 	}
@@ -631,6 +639,7 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 .blog-post-content img {
 	display: block;
 	margin: 0 auto;
+	max-width: 100%;
 }
 
 /*Recruit and contact*/
