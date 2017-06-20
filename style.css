@@ -360,6 +360,7 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 	width: 100%;
 	display: inline-block;
 	text-align: center;
+	word-break: break-word;
 }
 
 .flexslider .flex-active-slide .flex-caption a strong{
@@ -726,8 +727,8 @@ input.wpcf7-form-control.wpcf7-file {
 }
 
 .footer-brand img {
-	width: 100px;
-	height: 100px;
+	width: 90px;
+	height: 90px;
 	margin: 0 5px;
 }
 
