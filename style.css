@@ -118,6 +118,12 @@ li {
 	border-color: #2a76c3;
 }
 
+@media(max-width: 992px){
+	.container{
+		width: 100%;
+	}
+}
+
 /* 2. Navbar */
 .top-navbar,
 .top-navbar > .container {
@@ -632,7 +638,6 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 
 /*Post*/
 .blog-post-content {
-	border: 1px solid #eee;
 	padding: 15px 10px;
 }
 
