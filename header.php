@@ -37,7 +37,7 @@
 		<meta name="Copyright" content="本站创作权权归Halomaple个人所有"/>
 
 		<script type="text/javascript">
-			//temp
+			// //temp
 			if(window.location.href == 'http://linkchina.hk/en_US/'
 				|| window.location.href == 'http://linkchina.hk/zh_CN/'
 				|| window.location.href == 'http://linkchina.hk/zh_HK/'){
@@ -62,7 +62,7 @@
 		<!-- Flexslider CSS -->
 		<link href="//cdn.bootcss.com/flexslider/2.1/flexslider-min.css" rel="stylesheet"/>
 		<!-- Font-Awesome -->
-		<link href="//cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="//cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 
 		<!--Customized css-->
 		<link href="<?php bloginfo('template_directory'); ?>/css/bootsnav.css" rel="stylesheet"/>
