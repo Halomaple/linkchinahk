@@ -643,8 +643,6 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 }
 
 .blog-post-content img {
-	display: block;
-	margin: 0 auto;
 	max-width: 100%;
 }
 
