@@ -49,6 +49,7 @@
 		<script src="<?php bloginfo('template_directory'); ?>/js/bootsnav.min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/jquery.singlePageNav.min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/jquery.toTop.min.js"></script>
+		<script src="<?php bloginfo('template_directory'); ?>/js/server.js"></script>
 		<!-- <script src="<?php bloginfo('template_directory'); ?>/js/language.js"></script> -->
 		<script type="text/javascript">
 			$(document).ready(function() {

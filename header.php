@@ -14,8 +14,8 @@
 				bloginfo('name');
 			} elseif (is_page()) {
 				single_post_title();
+				echo '&nbsp;|&nbsp;';
 				bloginfo('name');
-				echo '';
 			} elseif (is_404()) {
 				echo 'Not found &nbsp;|&nbsp;';
 				bloginfo('name');
@@ -66,7 +66,7 @@
 
 		<!--Customized css-->
 		<link href="<?php bloginfo('template_directory'); ?>/css/bootsnav.css" rel="stylesheet"/>
-		<link href="<?php bloginfo('template_directory'); ?>/style.css?v=1.0.4" rel="stylesheet"/>
+		<link href="<?php bloginfo('template_directory'); ?>/style.css?v=1.0.5" rel="stylesheet"/>
 	</head>
 
 	<body>
