@@ -566,6 +566,16 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 	color: white;
 }
 
+.collocation-item-buy a {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.collocation-item-buy:hover a {
+	color: white;
+}
+
 .collocation-item-buy {
 	font-weight: bold;
 }
