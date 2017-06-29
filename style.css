@@ -771,6 +771,10 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 	margin: 0 10px;
 }
 
+.server-buy-button {
+	margin: 20px;
+}
+
 /*Recruit and contact*/
 .wpcf7 {
 	padding: 100px 0;

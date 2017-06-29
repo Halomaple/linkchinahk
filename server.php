@@ -105,12 +105,14 @@
 					</div>
 				</section>
 
-				<section>
+				<section class="well">
 					<label class="label label-success total-price">
 						价格：
 					</label>
 
-					<input type="number" value="1000" /> RMB
+					<input type="number" value="1000" readonly="readonly" /> RMB
+
+					<button class="btn btn-primary server-buy-button">立即购买</button>
 				</section>
 			</div><!--/row-->
 		</div><!--/container-->
