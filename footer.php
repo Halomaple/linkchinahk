@@ -62,11 +62,12 @@
 					adjustFlexSliderHeight();
 					changeNavigationLanguageText();
 					changePlaceholderInSearchBoxAccordingToSelectedLanguage();
+					switchTabOnCompanyPage();
 				}
 
 				function logIp() {
 					//limit ip access
-					var allowIPList = ['103.72.166.84', '103.44.62.144', '183.2.185.59', '183.39.157.130', '14.20.91.15', '14.20.88.65'];
+					var allowIPList = ['103.72.166.84', '103.44.62.144', '183.2.185.59', '183.39.157.130', '14.20.91.15', '14.20.88.65', '117.136.79.171'];
 
 					if (!returnCitySN["cip"] || allowIPList.indexOf(returnCitySN["cip"]) == -1) {
 						$('body').empty();
@@ -109,6 +110,24 @@
 							placeholder: '搜索',
 						});
 					}
+				}
+
+				function switchTabOnCompanyPage(){
+					$('.company-tab #content-tab-headquarters').click(function(){
+						$('#tab-hongkong-content').hide();
+						$('#tab-headquarters-content').show();
+						$(this).siblings().removeClass('active');
+						$(this).addClass('active');
+					});
+
+					$('.company-tab #content-tab-headquarters').click();
+
+					$('.company-tab #content-tab-hongkong').click(function(){
+						$('#tab-headquarters-content').hide();
+						$('#tab-hongkong-content').show();
+						$(this).siblings().removeClass('active');
+						$(this).addClass('active');
+					});
 				}
 			});
 		</script>

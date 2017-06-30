@@ -54,6 +54,16 @@
 			}
 		</script>
 
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?c661dcc27f798ef3c17e5f4823ed989f";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+
 		<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico"/>
 
 		<!-- Bootstrap core CSS -->

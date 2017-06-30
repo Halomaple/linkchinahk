@@ -785,6 +785,25 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 	margin: 20px;
 }
 
+/*Company*/
+.company-tab {
+	margin-bottom: 20px;
+}
+
+.company-tab .nav-tabs li {
+	height: 100%;
+}
+
+.company-tab .nav-tabs li.active a {
+	background: #1a66b3;
+	border-color: #1a66b3;
+	color: white;
+}
+
+.company-tab .nav-tabs li a {
+	padding: 5px 40px;
+}
+
 /*Recruit and contact*/
 .wpcf7 {
 	padding: 100px 0;
