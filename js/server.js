@@ -57,6 +57,8 @@ $(document).ready(function() {
 		$('#bandwith-slider').on('slide', function(slideEvt) {
 			$('#bandwith-value').val(slideEvt.value);
 			setBandwidth(slideEvt.value);
+		}).on('click mousedown',function(){
+			$('#bandwith-value').val(bandwidthSlider.slider('getValue'));
 		});
 
 		$('#bandwith-value').on('keyup mouseup', function(event) {
