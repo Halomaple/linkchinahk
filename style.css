@@ -770,10 +770,33 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 }
 
 /*Server*/
+.server .configuration-panel {
+	margin: 40px 0;
+}
+
 .configuration-panel a.btn {
 	float: left;
 	min-width: 100px;
 	border-radius: 0;
+}
+
+.configuration-bandwith .slider.slider-horizontal {
+	width: 100%;
+	margin: 30px 0 10px 0;
+}
+
+.configuration-bandwith .slider-selection {
+	background: #337ab7;
+}
+
+@media(max-width:500px) {
+	.configuration-bandwith .slider.slider-horizontal .slider-handle {
+		top: -5px;
+		margin-left: -15px;
+		height: 30px;
+		width: 30px;
+	}
+
 }
 
 .total-price {

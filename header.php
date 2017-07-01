@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -73,6 +72,10 @@
 		<link href="//cdn.bootcss.com/flexslider/2.1/flexslider-min.css" rel="stylesheet"/>
 		<!-- Font-Awesome -->
 		<link href="//cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<!-- Bootstrap slider -->
+		<link href="//cdn.bootcss.com/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" rel="stylesheet">
+
 
 		<!--Customized css-->
 		<link href="<?php bloginfo('template_directory'); ?>/css/bootsnav.css" rel="stylesheet"/>

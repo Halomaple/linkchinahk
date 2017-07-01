@@ -43,6 +43,7 @@
 		<script src="//cdn.bootcss.com/jquery/2.2.0/jquery.js"></script>
 		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 
+		<script src="//cdn.bootcss.com/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script>
 		<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="//cdn.bootcss.com/flexslider/2.1/jquery.flexslider-min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/flexslider.min.js"></script>

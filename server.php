@@ -11,7 +11,7 @@
 					<div class="panel panel-primary">
 						<div class="panel-heading">机房与配置</div>
 						<div class="panel-body">
-							<div class="clearfix">
+							<div class="clearfix configuration-collocation-room">
 								<h4>机房区域：</h4>
 								<a class="btn btn-default">香港</a>
 								<a class="btn btn-default">深圳</a>
@@ -20,14 +20,14 @@
 								<a class="btn btn-default">湖南</a>
 							</div>
 
-							<div class="clearfix">
+							<div class="clearfix configuration-collocation-size">
 								<h4>托管规格：</h4>
 								<a class="btn btn-default">1U</a>
 								<a class="btn btn-default">2U</a>
 								<a class="btn btn-default">整机柜</a>
 							</div>
 
-							<div class="clearfix">
+							<div class="clearfix configuration-device-type">
 								<h4>设备类型：</h4>
 								<a class="btn btn-default">服务器</a>
 								<a class="btn btn-default">交换机</a>
@@ -42,14 +42,14 @@
 					<div class="panel panel-warning">
 						<div class="panel-heading">网络与安全</div>
 						<div class="panel-body">
-							<div class="clearfix">
+							<div class="clearfix configuration-bandwith">
 								<h4>独享宽带：</h4>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em;">
-										0%
-									</div>
-								</div>
+								<input id="bandwith-slider" data-slider-id='bandwith-slider' type="text" data-slider-min="1" data-slider-max="1000" data-slider-step="1" data-slider-value="1"/>
+
+								<label for="bandwith-value">带宽：</label>
+								<input type="number" id="bandwith-value" value="1" min="1" max="1000" maxlength="4" pattern="[0-9]*"/> M
 							</div>
+
 
 							<div class="clearfix">
 								<h4>独立IP：</h4>
@@ -105,7 +105,7 @@
 					</div>
 				</section>
 
-				<section class="well">
+				<section class="well total-price-box">
 					<label class="label label-success total-price">
 						价格：
 					</label>
