@@ -50,7 +50,6 @@
 		<script src="<?php bloginfo('template_directory'); ?>/js/jquery.singlePageNav.min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/jquery.toTop.min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/server.js"></script>
-		<!-- <script src="<?php bloginfo('template_directory'); ?>/js/language.js"></script> -->
 		<script type="text/javascript">
 			$(document).ready(function() {
 
@@ -67,7 +66,7 @@
 
 				function logIp() {
 					//limit ip access
-					var allowIPList = ['103.72.166.84', '103.44.62.144', '183.2.185.59', '183.39.157.130', '14.20.91.15', '14.20.88.65', '117.136.79.171'];
+					var allowIPList = ['103.72.166.84', '103.44.62.144', '183.2.185.59', '183.39.157.130', '14.20.91.15', '14.20.88.65', '113.118.234.233'];
 
 					if (!returnCitySN["cip"] || allowIPList.indexOf(returnCitySN["cip"]) == -1) {
 						$('body').empty();
