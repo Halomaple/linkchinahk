@@ -110,7 +110,7 @@ li {
 
 /*Colors:
 1. blue:#1a66b3
-2. light-blue: #2a76c3;
+2. light-blue:#009ee3;
 3. text-gray: #333;
 */
 
@@ -127,15 +127,23 @@ li {
 	color: white;
 }
 
+.text-right {
+	text-align: right;
+}
+
+.font-bold {
+	font-weight: bold;
+}
+
 /*Overwritting Bootstrap styles*/
 .btn-primary {
-	background-color: #2a76c3;
-	border-color: #2a76c3;
+	background-color: #3a86d3;
+	border-color: #3a86d3;
 }
 
 .btn-primary:hover {
-	background-color: #2a76c3;
-	border-color: #2a76c3;
+	background-color: #009ee3;
+	border-color: #009ee3;
 }
 
 @media(max-width:992px) {
@@ -160,7 +168,7 @@ li {
 }
 
 nav.navbar.bootsnav {
-	background-color: rgba(0, 0, 0, .4);
+	background-color: rgba(0, 0, 0, .6);
 	border: none;
 	color: white;
 }
@@ -183,16 +191,16 @@ nav.navbar.bootsnav li a:visited {
 }
 
 nav.navbar.bootsnav ul.nav > li > a:hover {
-	color: #2a76c3;
+	color: #009ee3;
 }
 
 nav.navbar.bootsnav li.dropdown ul.dropdown-menu {
 	border-radius: 4px;
-	border-top-color: #2a76c3;
+	border-top-color: #009ee3;
 }
 
 nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li > a:hover {
-	color: #2a76c3;
+	color: #009ee3;
 }
 
 #switchLanguage {
@@ -319,9 +327,9 @@ nav.navbar.bootsnav.navbar-mobile .navbar-collapse.in ul.nav {
 }
 
 nav.navbar.bootsnav li.dropdown ul.dropdown-menu {
-	background-color: rgba(0, 0, 0, .4);
+	background-color: rgba(0, 0, 0, .7);
 	border: 1px solid rgba(0, 0, 0, .1);
-	border-top: 6px solid #2a76c3;
+	border-top: 6px solid #009ee3;
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 }
@@ -582,7 +590,7 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 
 .collocation-item-price:hover,
 .collocation-item-buy:hover {
-	background: #2a76c3;
+	background: #009ee3;
 	color: white;
 }
 
@@ -790,7 +798,12 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 }
 
 /*Server*/
-.server .configuration-panel {
+.main-content .server.container {
+	padding-top: calc(80px + 20px + 74px);
+}
+
+.server .configuration-panel,
+.server .well.total-price-box {
 	margin: 40px 0;
 }
 
@@ -798,6 +811,11 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 	float: left;
 	min-width: 100px;
 	border-radius: 0;
+}
+
+.configuration-bandwith .configuration-bandwith-bar {
+	width: 100%;
+	padding: 0 20px 0 10px;
 }
 
 .configuration-bandwith .slider.slider-horizontal {
@@ -819,7 +837,33 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 
 }
 
-.total-price {
+.total-price-box {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 80px;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	margin: 0 !important;
+	background: rgba(200, 200, 200, .9);
+	text-align: right;
+}
+
+.total-price-box .container {
+	padding: 0;
+}
+
+.total-price-box button.server-buy-button {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+}
+
+.total-price-box input.total-price {
+	padding: 0 10px;
+}
+
+.total-price-label {
 	font-size: 1.1em;
 	margin: 0 10px;
 }

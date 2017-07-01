@@ -44,7 +44,10 @@
 						<div class="panel-body">
 							<div class="clearfix configuration-bandwith">
 								<h4>独享宽带：</h4>
-								<input id="bandwith-slider" data-slider-id='bandwith-slider' type="text" data-slider-min="1" data-slider-max="1000" data-slider-step="1" data-slider-value="1"/>
+
+								<div class="configuration-bandwith-bar">
+									<input id="bandwith-slider" data-slider-id='bandwith-slider' type="text" data-slider-min="1" data-slider-max="1000" data-slider-step="1" data-slider-value="1"/>
+								</div>
 
 								<label for="bandwith-value">带宽：</label>
 								<input type="number" id="bandwith-value" value="1" min="1" max="1000" maxlength="4" pattern="[0-9]*"/> M
@@ -106,12 +109,14 @@
 				</section>
 
 				<section class="well total-price-box">
-					<label class="label label-success total-price">
-						价格：
-					</label>
-
-					<input type="text" readonly="readonly" /> RMB
-					<button class="btn btn-primary server-buy-button">立即购买</button>
+					<div class="container">
+						<label class="label label-success total-price-label">
+							价格 :
+						</label>
+						<input type="text" readonly="readonly" class="total-price font-bold text-right" />
+						<strong>RMB</strong>
+						<button class="btn btn-primary server-buy-button">立即购买</button>
+					</div>
 				</section>
 			</div><!--/row-->
 		</div><!--/container-->
