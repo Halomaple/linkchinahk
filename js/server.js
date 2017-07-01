@@ -44,6 +44,8 @@ $(document).ready(function() {
 
 			calculateTotalPrice();
 		});
+
+		$('.configuration-collocation-room a').first().click();
 	}
 
 	function initializeCollocationSize() {
@@ -120,15 +122,35 @@ $(document).ready(function() {
 	}
 
 	function calculateTotalPrice() {
-		var price = 0;
+		var price = buildTotalPrice();
 
+		$('.total-price-box input').val(formatTotalPrice(price));
+	}
+
+	function buildTotalPrice(){
+		var price = 0;
 		switch (selectedConfigurations.collocationRoom.id) {
-			case configurationsList.collocationRooms[0].id:{
-				price = selectedConfigurations.bandwidth * 450 + 650 ;
-			}
+			case configurationsList.collocationRooms[0].id:
+				{
+					price = selectedConfigurations.bandwidth * 450 + 650;
+				}
 		}
 
-		$('.total-price-box input').val(price);
+		return price;
+	}
+
+	function formatTotalPrice(price){
+		var totalPrice = '';
+
+		price = price.toString().split('').reverse().join('').split('');
+		for (var i = 0; i < price.length; i++) {
+			if (i > 0 && i % 3 === 0) {
+				totalPrice += ',';
+			}
+			totalPrice += price[i];
+		}
+
+		return totalPrice.split('').reverse().join('') + '.00';
 	}
 
 });

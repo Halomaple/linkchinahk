@@ -110,8 +110,7 @@
 						价格：
 					</label>
 
-					<input type="number" value="1000" readonly="readonly" /> RMB
-
+					<input type="text" readonly="readonly" /> RMB
 					<button class="btn btn-primary server-buy-button">立即购买</button>
 				</section>
 			</div><!--/row-->

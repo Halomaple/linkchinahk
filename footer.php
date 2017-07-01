@@ -134,7 +134,7 @@
 
 		<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 		<script type="text/javascript">
-			//创建和初始化地图函数：
+			/*/创建和初始化地图函数：
 			function initMap() {
 				createMap(); //创建地图
 				setMapEvent(); //设置地图事件
@@ -251,7 +251,7 @@
 				return icon;
 			}
 
-			initMap(); //创建和初始化地图
+			initMap(); //创建和初始化地图*/
 		</script>
 	</body>
 </html>
