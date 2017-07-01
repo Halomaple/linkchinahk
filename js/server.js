@@ -56,7 +56,7 @@ $(document).ready(function() {
 
 		$('#bandwith-slider').on('slide', function(slideEvt) {
 			$('#bandwith-value').val(slideEvt.value);
-			setBandwidth(slideEvt.value);
+			syncBandwidth(bandwidthSlider, slideEvt.value);
 		}).on('click mousedown',function(){
 			$('#bandwith-value').val(bandwidthSlider.slider('getValue'));
 		});
@@ -64,25 +64,22 @@ $(document).ready(function() {
 		$('#bandwith-value').on('keyup mouseup', function(event) {
 			if ($(this).val() > 1000) {
 				$(this).val(1000);
-				bandwidthSlider.slider('setValue', $(this).val());
-				setBandwidth($(this).val());
+				syncBandwidth(bandwidthSlider, $(this).val());
 			} else {
-				bandwidthSlider.slider('setValue', $(this).val());
-				setBandwidth($(this).val());
+				syncBandwidth(bandwidthSlider, $(this).val());
 			}
 		}).on('change', function(event) {
 			if ($(this).val() < 1) {
 				$(this).val(1);
-				bandwidthSlider.slider('setValue', $(this).val());
-				setBandwidth($(this).val());
+				syncBandwidth(bandwidthSlider, $(this).val());
 			} else {
-				bandwidthSlider.slider('setValue', $(this).val());
-				setBandwidth($(this).val());
+				syncBandwidth(bandwidthSlider, $(this).val());
 			}
 		});
 	}
 
-	function setBandwidth(value) {
+	function syncBandwidth(bandwidthSlider, value) {
+		bandwidthSlider.slider('setValue', value);
 		selectedConfigurations.bandwidth = value;
 		calculateTotalPrice();
 	}
