@@ -18,11 +18,19 @@ body {
 	margin: 0;
 	padding: 0;
 	transition: all 0.3s ease-in-out;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 button {
 	outline: none;
 	-moz-outline: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 button:hover,
@@ -51,6 +59,10 @@ a {
 	outline: none;
 	-moz-outline: none;
 	color: #333;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 a:hover,
@@ -73,6 +85,10 @@ div,
 span,
 header footer {
 	word-break: break-all;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 hr {
@@ -86,6 +102,10 @@ ul {
 
 li {
 	list-style: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 /*Colors:
