@@ -930,6 +930,12 @@ input.wpcf7-form-control.wpcf7-file {
 
 }
 
+/*404*/
+.page-not-found img {
+	display: block;
+	margin: 0 auto;
+}
+
 /*Footer*/
 .footer {
 	margin-top: 50px;
