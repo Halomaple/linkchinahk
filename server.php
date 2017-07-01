@@ -99,7 +99,7 @@
 						<div class="panel-heading">购买数量</div>
 						<div class="panel-body">
 							<div class="clearfix">
-								<input type="number" value="1" /> 台
+								<input type="number" value="1" min="1" max="20" maxlength="2" pattern="[0-9]*"/> 台
 							</div>
 						</div>
 					</div>
