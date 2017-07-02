@@ -14,10 +14,10 @@
 							<div class="clearfix configuration-collocation-room">
 								<h4>机房区域：</h4>
 								<a class="btn btn-default">香港</a>
-								<a class="btn btn-default">深圳</a>
+								<!--a class="btn btn-default">深圳</a>
 								<a class="btn btn-default">江苏</a>
 								<a class="btn btn-default">东莞</a>
-								<a class="btn btn-default">湖南</a>
+								<a class="btn btn-default">湖南</a-->
 							</div>
 
 							<div class="clearfix configuration-collocation-size">
@@ -44,7 +44,6 @@
 						<div class="panel-body">
 							<div class="clearfix configuration-bandwith">
 								<h4>独享宽带：</h4>
-
 								<div class="configuration-bandwith-bar">
 									<input id="bandwith-slider" data-slider-id='bandwith-slider' type="text" data-slider-min="1" data-slider-max="1000" data-slider-step="1" data-slider-value="1"/>
 								</div>
@@ -53,8 +52,7 @@
 								<input type="number" id="bandwith-value" value="1" min="1" max="1000" maxlength="4" pattern="[0-9]*"/> M
 							</div>
 
-
-							<div class="clearfix">
+							<div class="clearfix configuration-ips">
 								<h4>独立IP：</h4>
 								<a class="btn btn-default">1个</a>
 								<a class="btn btn-default">4个</a>
@@ -66,7 +64,7 @@
 								<a class="btn btn-default">256个</a>
 							</div>
 
-							<div class="clearfix">
+							<div class="clearfix configuration-defence">
 								<h4>防御峰值：</h4>
 								<a class="btn btn-default">5G</a>
 								<a class="btn btn-default">10G</a>
@@ -85,13 +83,13 @@
 					<div class="panel panel-info">
 						<div class="panel-heading">购买时长</div>
 						<div class="panel-body">
-							<div class="clearfix">
+							<div class="clearfix configuration-month">
 								<h4>托管时间：</h4>
 								<a class="btn btn-default">1个月</a>
 								<a class="btn btn-default">6个月</a>
-								<a class="btn btn-default">1年</a>
-								<a class="btn btn-default">2年</a>
-								<a class="btn btn-default">3年</a>
+								<a class="btn btn-default">12个月</a>
+								<a class="btn btn-default">24个月</a>
+								<a class="btn btn-default">36个月</a>
 							</div>
 						</div>
 					</div>
@@ -101,7 +99,7 @@
 					<div class="panel panel-success">
 						<div class="panel-heading">购买数量</div>
 						<div class="panel-body">
-							<div class="clearfix">
+							<div class="clearfix configuration-number">
 								<input type="number" value="1" min="1" max="20" maxlength="2" pattern="[0-9]*"/> 台
 							</div>
 						</div>

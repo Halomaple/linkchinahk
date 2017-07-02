@@ -3,7 +3,11 @@ $(document).ready(function() {
 		collocationRooms: [],
 		collocationSizes: [],
 		deviceTypes: [],
-		bandwidths: 1
+		bandwidths: 1,
+		ips: [],
+		defence: [],
+		collocationMonths: [],
+		collocationNumbers: []
 	};
 
 	var selectedConfigurations = {
@@ -11,9 +15,19 @@ $(document).ready(function() {
 			id: 0,
 			name: ''
 		},
-		collocationSize: '',
-		deviceType: '',
-		bandwidth: 1
+		collocationSize: {
+			id: 0,
+			name: ''
+		},
+		deviceType: {
+			id: 0,
+			name: ''
+		},
+		bandwidth: 1,
+		ips: 1,
+		defence: 5,
+		collocationMonth: 1,
+		collocationNumber: 1
 	};
 
 	initializeConfiguration();
@@ -22,11 +36,38 @@ $(document).ready(function() {
 		initializeCollocationRoom();
 		initializeCollocationSize();
 		initializeDeviceType();
-		initialBandwith();
+		initializeBandwith();
+		initializeIPs();
+		initializeDefence();
+		initializeCollocationMonth();
+		initializeCollocationNumber();
+	}
+
+	preSelectConfigurations();
+
+	function preSelectConfigurations() {
+		$('.configuration-collocation-room a').first().click();
+		$('.configuration-collocation-size a').first().click();
+		$('.configuration-device-type a').first().click();
+		$('.configuration-ips a').first().click();
+		$('.configuration-defence a').first().click();
+		$('.configuration-month a').first().click();
+	}
+
+	function activeCurrentButton(element) {
+		$(element).siblings().removeClass('btn-primary');
+		$(element).addClass('btn-primary');
+	}
+
+	function addTabIndex(element) {
+		$(element).attr({
+			'tabindex': 0
+		});
 	}
 
 	function initializeCollocationRoom() {
 		$('.configuration-collocation-room a').each(function(index) {
+			addTabIndex(this);
 			configurationsList.collocationRooms.push({
 				id: index,
 				name: $(this).text()
@@ -35,21 +76,19 @@ $(document).ready(function() {
 
 		$('.configuration-collocation-room a').click(function() {
 			var element = this;
-			$(element).siblings().removeClass('btn-primary');
-			$(element).addClass('btn-primary');
-
+			activeCurrentButton(element);
 			selectedConfigurations.collocationRoom.id = configurationsList.collocationRooms.filter(function(r) {
 				return r.name == $(element).text();
 			})[0].id;
 
 			calculateTotalPrice();
 		});
-
-		$('.configuration-collocation-room a').first().click();
 	}
 
 	function initializeCollocationSize() {
 		$('.configuration-collocation-size a').each(function(index) {
+			addTabIndex(this);
+
 			configurationsList.collocationSizes.push({
 				id: index,
 				name: $(this).text()
@@ -57,29 +96,40 @@ $(document).ready(function() {
 		});
 
 		$('.configuration-collocation-size a').click(function() {
-			$(this).siblings().removeClass('btn-primary');
-			$(this).addClass('btn-primary');
-			selectedConfigurations.collocationSize = $(this).text();
+			var element = this;
+			activeCurrentButton(element);
+
+			selectedConfigurations.collocationSize.id = configurationsList.collocationSizes.filter(function(r) {
+				return r.name == $(element).text();
+			})[0].id;
+
 			calculateTotalPrice();
 		});
 	}
 
 	function initializeDeviceType() {
 		$('.configuration-device-type a').each(function(index) {
+			addTabIndex(this);
+
 			configurationsList.deviceTypes.push({
 				id: index,
 				name: $(this).text()
 			});
 		});
+
 		$('.configuration-device-type a').click(function() {
-			$(this).siblings().removeClass('btn-primary');
-			$(this).addClass('btn-primary');
-			selectedConfigurations.deviceType = $(this).text();
-			calculateTotalPrice();
+			var element = this;
+			activeCurrentButton(element);
+
+			selectedConfigurations.deviceType.id = configurationsList.deviceTypes.filter(function(r) {
+				return r.name == $(element).text();
+			})[0].id;
+
+			//calculateTotalPrice();
 		});
 	}
 
-	function initialBandwith() {
+	function initializeBandwith() {
 		var bandwidthSlider = $('#bandwith-slider').slider({
 			tooltip: 'always',
 			ticks: [1, 100, 200, 300, 400, 500, 1000],
@@ -102,11 +152,7 @@ $(document).ready(function() {
 			if ($(this).val() > 1000) {
 				$(this).val(1000);
 				syncBandwidth(bandwidthSlider, $(this).val());
-			} else {
-				syncBandwidth(bandwidthSlider, $(this).val());
-			}
-		}).on('change', function(event) {
-			if ($(this).val() < 1) {
+			} else if ($(this).val() < 1) {
 				$(this).val(1);
 				syncBandwidth(bandwidthSlider, $(this).val());
 			} else {
@@ -115,31 +161,114 @@ $(document).ready(function() {
 		});
 	}
 
+	function initializeIPs() {
+		$('.configuration-ips a').each(function(index, el) {
+			addTabIndex(this);
+		});
+
+		$('.configuration-ips a').click(function(event) {
+			activeCurrentButton(this);
+
+			selectedConfigurations.ips = getNumberFromText($(this).text());
+			calculateTotalPrice();
+		});
+	}
+
+	function initializeDefence() {
+		$('.configuration-defence a').each(function() {
+			addTabIndex(this);
+		});
+
+		$('.configuration-defence a').click(function(event) {
+			activeCurrentButton(this);
+			selectedConfigurations.defence = getNumberFromText($(this).text());
+			calculateTotalPrice();
+		});
+	}
+
+	function initializeCollocationMonth() {
+		$('.configuration-month a').each(function(index, el) {
+			addTabIndex(this);
+		});
+
+		$('.configuration-month a').click(function() {
+			activeCurrentButton(this);
+
+			selectedConfigurations.collocationMonth = getNumberFromText($(this).text());
+			calculateTotalPrice();
+		});
+	}
+
+	function initializeCollocationNumber() {
+		$('.configuration-number input').each(function(){
+			addTabIndex(this);
+		});
+
+		$('.configuration-number input').on('keyup mouseup', function() {
+			if ($(this).val() > 20) {
+				$(this).val(20);
+			} else if ($(this).val() < 1) {
+				$(this).val(1);
+			}
+			selectedConfigurations.collocationNumber = $(this).val();
+			calculateTotalPrice();
+		});
+	}
+
+	function getNumberFromText(text) {
+		return parseInt(/[0-9]*/.exec(text)[0]);
+	}
+
 	function syncBandwidth(bandwidthSlider, value) {
 		bandwidthSlider.slider('setValue', value);
 		selectedConfigurations.bandwidth = parseInt(value);
 		calculateTotalPrice();
 	}
 
-	function calculateTotalPrice() {
-		var price = buildTotalPrice();
-
-		$('.total-price-box input').val(formatTotalPrice(price));
-	}
-
-	function buildTotalPrice(){
+	function buildTotalPrice() {
 		var price = 0;
+
+		var hongkongPrices = {
+			collocationSizePrice: 100,
+			bandwidthPrice: 450,
+			ipPrice: 50,
+			defencePrice: 700
+		};
+
 		switch (selectedConfigurations.collocationRoom.id) {
 			case configurationsList.collocationRooms[0].id:
 				{
-					price = selectedConfigurations.bandwidth * 450 + 650;
+					price = (
+						getFinalCollocationSizePrice() +
+						selectedConfigurations.bandwidth * hongkongPrices.bandwidthPrice +
+						selectedConfigurations.ips * hongkongPrices.ipPrice +
+						selectedConfigurations.defence * hongkongPrices.defencePrice
+					) * selectedConfigurations.collocationMonth * selectedConfigurations.collocationNumber;
 				}
 		}
 
 		return price;
 	}
 
-	function formatTotalPrice(price){
+	function getFinalCollocationSizePrice() {
+		var price = 0;
+		switch (selectedConfigurations.collocationSize.id) {
+			case configurationsList.collocationSizes[0].id:
+				price = 100;
+				break;
+			case configurationsList.collocationSizes[1].id:
+				price = 200;
+				break;
+			case configurationsList.collocationSizes[2].id:
+				price = 1000;
+				break;
+			default:
+				price = 100;
+		}
+		return price;
+	}
+
+	function formatTotalPrice(price) {
 		var totalPrice = '';
 
 		price = price.toString().split('').reverse().join('').split('');
@@ -153,4 +282,8 @@ $(document).ready(function() {
 		return totalPrice.split('').reverse().join('') + '.00';
 	}
 
+	function calculateTotalPrice() {
+		var price = buildTotalPrice();
+		$('.total-price-box input').val(formatTotalPrice(price));
+	}
 });
