@@ -135,6 +135,10 @@ li {
 	font-weight: bold;
 }
 
+.inline-block {
+	display: inline-block;
+}
+
 /*Overwritting Bootstrap styles*/
 .btn-primary {
 	background-color: #3a86d3;
@@ -860,6 +864,7 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 }
 
 .total-price-box input.total-price {
+	max-width: calc(100% - 55px);
 	padding: 0 10px;
 }
 
@@ -870,6 +875,33 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 
 .server-buy-button {
 	margin: 20px;
+}
+
+@media(max-width:992px) {
+	.total-price-box {
+		padding-left: 0;
+		padding-right: 0;
+		top: 54px;
+	}
+
+}
+
+@media(max-width:500px) {
+	.total-price-box {
+		text-align: center;
+	}
+
+	.total-price-box .container > * {
+		margin: 10px 0;
+	}
+
+	.total-price-box button.server-buy-button {
+		margin-top: 10px;
+		margin-right: 10px;
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+
 }
 
 /*Company*/
@@ -1003,6 +1035,12 @@ input.wpcf7-form-control.wpcf7-file {
 }
 
 /*Baidu map*/
+
+/*Hide map for now*/
+.hm-t-container {
+	display: none !important;
+}
+
 .iw_poi_title {
 	color: #CC5522;
 	font-size: 14px;

@@ -111,8 +111,10 @@
 						<label class="label label-success total-price-label">
 							价格 :
 						</label>
-						<input type="text" readonly="readonly" class="total-price font-bold text-right" />
-						<strong>RMB</strong>
+						<div class="inline-block">
+							<input type="text" readonly="readonly" class="total-price font-bold text-right" />
+							<strong>RMB</strong>
+						</div>
 						<button class="btn btn-primary server-buy-button">立即购买</button>
 					</div>
 				</section>
