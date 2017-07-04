@@ -1,8 +1,4 @@
 <?php get_header(); ?>
-<?php get_footer(); ?>
-
-
-
 <div class="container">
 	<div class="row">
 		<section class="access clearfix">
@@ -60,7 +56,9 @@
 						<li class="list-group-item">10M BGP独享网络</li>
 						<li class="list-group-item">1个起 独立IP</li>
 						<li class="list-group-item">5G起 免费防御峰值</li>
-						<li class="list-group-item collocation-item-buy pointer">立即抢购</li>
+						<li class="list-group-item collocation-item-buy pointer">
+							<a href="http://linkchina.hk/server/?configurations=1U">立即抢购</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -74,7 +72,9 @@
 						<li class="list-group-item">10M BGP独享网络</li>
 						<li class="list-group-item">1个起 独立IP</li>
 						<li class="list-group-item">5G起 免费防御峰值</li>
-						<li class="list-group-item collocation-item-buy pointer">立即抢购</li>
+						<li class="list-group-item collocation-item-buy pointer">
+							<a href="http://linkchina.hk/server/?configurations=2U">立即抢购</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -82,13 +82,15 @@
 			<div class="col-md-4 col-sm-4 col-xs-12 text-center">
 				<div class="service-item">
 					<ul class="list-group">
-						<li class="list-group-item collocation-item-title">1U 托管</li>
-						<li class="list-group-item collocation-item-price">￥380 / 月</li>
-						<li class="list-group-item">1U 托管规格</li>
-						<li class="list-group-item">10M BGP独享网络</li>
-						<li class="list-group-item">1个起 独立IP</li>
+						<li class="list-group-item collocation-item-title">整柜托管</li>
+						<li class="list-group-item collocation-item-price">￥5700 / 月</li>
+						<li class="list-group-item">整柜 托管规格</li>
+						<li class="list-group-item">100M BGP独享网络</li>
+						<li class="list-group-item">32个起 独立IP</li>
 						<li class="list-group-item">5G起 免费防御峰值</li>
-						<li class="list-group-item collocation-item-buy pointer">立即抢购</li>
+						<li class="list-group-item collocation-item-buy pointer">
+							<a href="http://linkchina.hk/server/?configurations=whole">立即抢购</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -163,3 +165,5 @@
 		</section>
 	</div><!--/row-->
 </div><!--/container-->
+
+<?php get_footer(); ?>

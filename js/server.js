@@ -254,16 +254,16 @@ $(document).ready(function() {
 		var price = 0;
 		switch (selectedConfigurations.collocationSize.id) {
 			case configurationsList.collocationSizes[0].id:
-				price = 100;
+				price = 0;
 				break;
 			case configurationsList.collocationSizes[1].id:
-				price = 200;
+				price = 100;
 				break;
 			case configurationsList.collocationSizes[2].id:
 				price = 1000;
 				break;
 			default:
-				price = 100;
+				price = 0;
 		}
 		return price;
 	}

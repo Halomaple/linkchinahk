@@ -181,6 +181,22 @@ nav.navbar.bootsnav {
 	padding: 30px 15px;
 }
 
+.navbar-brand img {
+	width: 150px;
+	height: 50px;
+	display: inline-block;
+	margin-top: -10px;
+}
+
+@media(max-width:992px) {
+	.navbar-brand img {
+		width: 150px;
+		height: 40px;
+		margin-top: -15px;
+	}
+
+}
+
 nav.navbar.bootsnav a.navbar-brand,
 nav.navbar.bootsnav ul.nav > li > a,
 nav.navbar.bootsnav i.glyphicon-search {
@@ -659,10 +675,15 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 	color: white;
 }
 
+.service > div {
+	margin: 20px 0;
+}
+
 .service-item-circle {
-	width: 300px;
-	height: 300px;
+	width: 250px;
+	height: 250px;
 	position: relative;
+	margin: 0 auto;
 }
 
 .service-item-circle-bg {
@@ -684,6 +705,14 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 	left: 50%;
 	transform: translateX(-50px) translateY(-50px);
 	z-index: 1;
+	transition: all 0.3s ease-in-out;
+}
+
+.service-item-circle:hover .service-item-circle-front {
+	width: 120px;
+	height: 120px;
+	transform: translateX(-60px) translateY(-60px);
+	transition: all 0.3s ease-in-out;
 }
 
 .service-item-circle h3 {
@@ -696,6 +725,12 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 	-ms-transform: translateX(-50%);
 	-o-transform: translateX(-50%);
 	transform: translateX(-50%);
+	transition: all 0.3s ease-in-out;
+}
+
+.service-item-circle:hover h3 {
+	font-size: 2.2em;
+	transition: all 0.3s ease-in-out;
 }
 
 /*Archives*/
@@ -1008,13 +1043,10 @@ input.wpcf7-form-control.wpcf7-file {
 }
 
 .footer-brand img {
-	width: 90px;
-	height: 90px;
+	width: 100%;
+	max-width: 300px;
+	height: auto;
 	margin: 0 5px;
-}
-
-.footer-brand h1 {
-	text-align: center;
 }
 
 .footer-contact {

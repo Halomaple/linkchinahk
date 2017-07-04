@@ -30,27 +30,27 @@
 		<meta name='robots' content='all'/>
 		<?php } ?>
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-		<meta name="keywords" content=""/>
+		<meta name="keywords" content="linkchinahk, 专线"/>
 		<meta name="description" content=""/>
 		<meta name="author" content="Jeff Doyle"/>
 		<meta name="Copyright" content="本站创作权权归Halomaple个人所有"/>
 
 		<script type="text/javascript">
 			// //temp
-			if(window.location.href == 'http://linkchina.hk/en_US/'
-				|| window.location.href == 'http://linkchina.hk/zh_CN/'
-				|| window.location.href == 'http://linkchina.hk/zh_HK/'){
-				window.location.href = window.location.href + 'home';
-			}
+			// if(window.location.href == 'http://linkchina.hk/en_US/'
+			// 	|| window.location.href == 'http://linkchina.hk/zh_CN/'
+			// 	|| window.location.href == 'http://linkchina.hk/zh_HK/'){
+			// 	window.location.href = window.location.href + 'home';
+			// }
 
-			if(window.location.href == 'http://linkchina.hk/en_US/zh_HK/'
-				|| window.location.href == 'http://linkchina.hk/en_US/zh_CN/'
-				|| window.location.href == 'http://linkchina.hk/zh_HK/en_US/'
-				|| window.location.href == 'http://linkchina.hk/zh_HK/zh_CN/'
-				|| window.location.href == 'http://linkchina.hk/zh_CN/en_US/'
-				|| window.location.href == 'http://linkchina.hk/zh_CN/zh_HK/'){
-				window.location.href = window.location.href.slice(0, window.location.href.length - 6) + 'home';
-			}
+			// if(window.location.href == 'http://linkchina.hk/en_US/zh_HK/'
+			// 	|| window.location.href == 'http://linkchina.hk/en_US/zh_CN/'
+			// 	|| window.location.href == 'http://linkchina.hk/zh_HK/en_US/'
+			// 	|| window.location.href == 'http://linkchina.hk/zh_HK/zh_CN/'
+			// 	|| window.location.href == 'http://linkchina.hk/zh_CN/en_US/'
+			// 	|| window.location.href == 'http://linkchina.hk/zh_CN/zh_HK/'){
+			// 	window.location.href = window.location.href.slice(0, window.location.href.length - 6) + 'home';
+			// }
 		</script>
 
 		<script>
@@ -84,46 +84,44 @@
 
 	<body>
 		<header class="top-navbar">
-			<div class="container">
-				<div class="row">
-					<nav class="navbar navbar-fixed navbar-mobile bootsnav">
-						<div class="container">
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-										data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-								<a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo('name');?></a>
+			<nav class="navbar navbar-fixed navbar-mobile bootsnav">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+								data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="<?php echo home_url(); ?>">
+							<img src="<?php bloginfo('template_directory')?>/images/logo.png">
+						</a>
+					</div>
+					<div id="navbar" class="collapse navbar-collapse">
+						<form method="get" class="search-form" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+							<div class="input-group">
+								<input name="s" id="search-input" type="text" class="form-control search-input-box" placeholder="Search">
+								<span class="input-group-btn">
+									<button type="submit" class="btn btn-default search-button">
+										<i class="glyphicon glyphicon-search">
+										</i>
+									</button>
+								</span>
 							</div>
-							<div id="navbar" class="collapse navbar-collapse">
-								<form method="get" class="search-form" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-									<div class="input-group">
-										<input name="s" id="search-input" type="text" class="form-control search-input-box" placeholder="Search">
-										<span class="input-group-btn">
-											<button type="submit" class="btn btn-default search-button">
-												<i class="glyphicon glyphicon-search">
-												</i>
-											</button>
-										</span>
-									</div>
-								</form>
-								<?php wp_nav_menu(array(
-									'menu' => 'header_menu',
-									'theme_location' => 'header_menu',
-									'depth' => 0,
-									'container' => false,
-									'menu_class' => 'nav navbar-ul navbar-nav navbar-right',
-									'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
-									'walker' => new wp_bootstrap_navwalker()));
-								?>
-							</div>
-						</div>
-					</nav>
+						</form>
+						<?php wp_nav_menu(array(
+							'menu' => 'header_menu',
+							'theme_location' => 'header_menu',
+							'depth' => 0,
+							'container' => false,
+							'menu_class' => 'nav navbar-ul navbar-nav navbar-right',
+							'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+							'walker' => new wp_bootstrap_navwalker()));
+						?>
+					</div>
 				</div>
-			</div>
+			</nav>
 		</header>
 
 		<div class="main-content">

@@ -17,8 +17,7 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 footer-company-brand">
 						<div class="footer-brand text-gray">
-							<img src="<?php bloginfo('template_directory')?>/images/logo-white.png">
-							<h1><?php bloginfo('name');?></h1>
+							<img src="<?php bloginfo('template_directory')?>/images/logo.png">
 						</div>
 					</div>
 
@@ -67,7 +66,7 @@
 
 				function logIp() {
 					//limit ip access
-					var allowIPList = ['103.72.166.84', '103.44.62.144', '183.2.185.59', '183.39.157.130', '14.20.91.15', '14.20.88.65', '113.118.234.233'];
+					var allowIPList = ['103.72.166.84', '103.44.62.144', '183.2.185.59', '183.39.157.130', '14.20.91.15', '14.20.88.65', '113.118.234.233', '117.136.40.205'];
 
 					if (!returnCitySN["cip"] || allowIPList.indexOf(returnCitySN["cip"]) == -1) {
 						$('body').empty();
