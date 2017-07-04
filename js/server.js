@@ -1,34 +1,44 @@
 $(document).ready(function() {
 	var configurationsList = {
-		collocationRooms: [],
-		collocationSizes: [],
-		deviceTypes: [],
-		bandwidths: 1,
-		ips: [],
-		defence: [],
-		collocationMonths: [],
-		collocationNumbers: []
-	};
-
-	var selectedConfigurations = {
-		collocationRoom: {
-			id: 0,
-			name: ''
+			collocationRooms: [],
+			collocationSizes: [],
+			deviceTypes: [],
+			bandwidths: 1,
+			ips: [],
+			defence: [],
+			collocationMonths: [],
+			collocationNumbers: []
 		},
-		collocationSize: {
-			id: 0,
-			name: ''
+		selectedConfigurations = {
+			collocationRoom: {
+				id: 0,
+				name: ''
+			},
+			collocationSize: {
+				id: 0,
+				name: ''
+			},
+			deviceType: {
+				id: 0,
+				name: ''
+			},
+			bandwidth: 1,
+			ips: 1,
+			defence: 5,
+			collocationMonth: 1,
+			collocationNumber: 1
 		},
-		deviceType: {
-			id: 0,
-			name: ''
+		basedConfigurations = {
+			hongkong: {
+				bandwidth: 2,
+				ips: 1,
+				defence: 5,
+				collocationMonth: 1,
+				collocationNumber: 1,
+				price: 650
+			}
 		},
-		bandwidth: 1,
-		ips: 1,
-		defence: 5,
-		collocationMonth: 1,
-		collocationNumber: 1
-	};
+		bandwidthSlider;
 
 	initializeConfiguration();
 
@@ -41,17 +51,22 @@ $(document).ready(function() {
 		initializeDefence();
 		initializeCollocationMonth();
 		initializeCollocationNumber();
+		preSelectConfigurations();
 	}
 
-	preSelectConfigurations();
-
 	function preSelectConfigurations() {
-		$('.configuration-collocation-room a').first().click();
-		$('.configuration-collocation-size a').first().click();
-		$('.configuration-device-type a').first().click();
-		$('.configuration-ips a').first().click();
-		$('.configuration-defence a').first().click();
-		$('.configuration-month a').first().click();
+		if (window.location.href.indexOf('configurations=1U') > -1) {
+			$('.configuration-collocation-room a').first().click();
+			$('.configuration-collocation-size a').first().click();
+			$('.configuration-device-type a').first().click();
+
+			setMinBandWith(bandwidthSlider, basedConfigurations.hongkong.bandwidth);
+			syncBandwidth(bandwidthSlider, basedConfigurations.hongkong.bandwidth);
+
+			$('.configuration-ips a').first().click();
+			$('.configuration-defence a').first().click();
+			$('.configuration-month a').first().click();
+		}
 	}
 
 	function activeCurrentButton(element) {
@@ -130,8 +145,12 @@ $(document).ready(function() {
 	}
 
 	function initializeBandwith() {
-		var bandwidthSlider = $('#bandwith-slider').slider({
+		bandwidthSlider = $('#bandwith-slider').slider({
 			tooltip: 'always',
+			min: 1,
+			max: 1000,
+			step: 1,
+			value: 1,
 			ticks: [1, 100, 200, 300, 400, 500, 1000],
 			ticks_positions: [0, 10, 20, 30, 50, 70, 100],
 			ticks_labels: ['1M', '100M', '200M', '300M', '400M', '500M', '1000M'],
@@ -142,18 +161,17 @@ $(document).ready(function() {
 		});
 
 		$('#bandwith-slider').on('slide', function(slideEvt) {
-			$('#bandwith-value').val(slideEvt.value);
 			syncBandwidth(bandwidthSlider, slideEvt.value);
 		}).on('click mousedown', function() {
-			$('#bandwith-value').val(bandwidthSlider.slider('getValue'));
+			syncBandwidth(bandwidthSlider, bandwidthSlider.slider('getValue'));
 		});
 
 		$('#bandwith-value').on('keyup mouseup', function(event) {
 			if ($(this).val() > 1000) {
 				$(this).val(1000);
 				syncBandwidth(bandwidthSlider, $(this).val());
-			} else if ($(this).val() < 1) {
-				$(this).val(1);
+			} else if ($(this).val() < basedConfigurations.hongkong.bandwidth) {
+				$(this).val(basedConfigurations.hongkong.bandwidth);
 				syncBandwidth(bandwidthSlider, $(this).val());
 			} else {
 				syncBandwidth(bandwidthSlider, $(this).val());
@@ -200,7 +218,7 @@ $(document).ready(function() {
 	}
 
 	function initializeCollocationNumber() {
-		$('.configuration-number input').each(function(){
+		$('.configuration-number input').each(function() {
 			addTabIndex(this);
 		});
 
@@ -220,9 +238,23 @@ $(document).ready(function() {
 	}
 
 	function syncBandwidth(bandwidthSlider, value) {
+		value = parseInt(value);
 		bandwidthSlider.slider('setValue', value);
-		selectedConfigurations.bandwidth = parseInt(value);
+		selectedConfigurations.bandwidth = value;
+		$('#bandwith-value').val(value);
 		calculateTotalPrice();
+	}
+
+	function setMinBandWith(bandwidthSlider, value) {
+		bandwidthSlider.slider('setAttribute', 'min', value);
+		bandwidthSlider.slider('setAttribute', 'value', value);
+		bandwidthSlider.slider('setAttribute', 'ticks', [value, 100, 200, 300, 400, 500, 1000]);
+		bandwidthSlider.slider('setAttribute', 'ticks_labels', [value + 'M', '100M', '200M', '300M', '400M', '500M', '1000M']);
+		$('.slider-tick-label')[0].innerHTML = value + 'M';
+
+		$('#bandwith-value').attr({
+			'min': value
+		});
 	}
 
 	function buildTotalPrice() {
@@ -238,16 +270,22 @@ $(document).ready(function() {
 		switch (selectedConfigurations.collocationRoom.id) {
 			case configurationsList.collocationRooms[0].id:
 				{
-					price = (
+					price = basedConfigurations.hongkong.price;
+					price += (
 						getFinalCollocationSizePrice() +
-						selectedConfigurations.bandwidth * hongkongPrices.bandwidthPrice +
-						selectedConfigurations.ips * hongkongPrices.ipPrice +
-						selectedConfigurations.defence * hongkongPrices.defencePrice
+						subtracBaseConfigurations(selectedConfigurations.bandwidth,
+							basedConfigurations.hongkong.bandwidth) * hongkongPrices.bandwidthPrice +
+						subtracBaseConfigurations(selectedConfigurations.ips, basedConfigurations.hongkong.ips) * hongkongPrices.ipPrice +
+						subtracBaseConfigurations(selectedConfigurations.defence, basedConfigurations.hongkong.defence) * hongkongPrices.defencePrice
 					) * selectedConfigurations.collocationMonth * selectedConfigurations.collocationNumber;
 				}
 		}
 
 		return price;
+	}
+
+	function subtracBaseConfigurations(selected, base) {
+		return selected - base;
 	}
 
 	function getFinalCollocationSizePrice() {
@@ -285,5 +323,16 @@ $(document).ready(function() {
 	function calculateTotalPrice() {
 		var price = buildTotalPrice();
 		$('.total-price-box input').val(formatTotalPrice(price));
+	}
+
+	function useBasePriceCheckFn(basedConfigurationsItem) {
+		var useBasePrice = false;
+		if (selectedConfigurations.bandwidth == basedConfigurationsItem.bandwidth &&
+			selectedConfigurations.ips == basedConfigurationsItem.ips &&
+			selectedConfigurations.defence == basedConfigurationsItem.defence) {
+			useBasePrice = true;
+		}
+
+		return useBasePrice;
 	}
 });

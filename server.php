@@ -45,7 +45,7 @@
 							<div class="clearfix configuration-bandwith">
 								<h4>独享宽带：</h4>
 								<div class="configuration-bandwith-bar">
-									<input id="bandwith-slider" data-slider-id='bandwith-slider' type="text" data-slider-min="1" data-slider-max="1000" data-slider-step="1" data-slider-value="1"/>
+									<input id="bandwith-slider" data-slider-id='bandwith-slider' type="text"/>
 								</div>
 
 								<label for="bandwith-value">带宽：</label>
