@@ -141,8 +141,8 @@ li {
 
 /*Overwritting Bootstrap styles*/
 .btn-primary {
-	background-color: #3a86d3;
-	border-color: #3a86d3;
+	background-color: #1a66b3;
+	border-color: #1a66b3;
 }
 
 .btn-primary:hover {
@@ -211,46 +211,13 @@ nav.navbar.bootsnav li a:visited {
 }
 
 nav.navbar.bootsnav ul.nav > li > a:hover {
+	text-shadow: 0px 0px 20px rgba(0, 0, 0, .7);
 	color: #009ee3;
-}
-
-nav.navbar.bootsnav li.dropdown ul.dropdown-menu {
-	border-radius: 4px;
-	border-top-color: #009ee3;
 }
 
 nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li > a:hover {
 	color: #009ee3;
-}
-
-#switchLanguage {
-	background: transparent;
-	box-shadow: none;
-	border: none;
-	max-width: 100px;
-	padding: 29px 0px 29px 15px;
-}
-
-#switchLanguage:active,
-#switchLanguage:focus,
-#switchLanguage:hover {
-	background: transparent;
-	box-shadow: none;
-}
-
-#switchLanguage .caret {
-	margin-top: 10px;
-}
-
-.change-language {
-
-	/*display: none;*/
-}
-
-.change-language .dropdown-menu {
-	text-align: right;
-	min-width: initial;
-	width: 100px;
+	text-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
 }
 
 .search-form {
@@ -349,7 +316,7 @@ nav.navbar.bootsnav.navbar-mobile .navbar-collapse.in ul.nav {
 nav.navbar.bootsnav li.dropdown ul.dropdown-menu {
 	background-color: rgba(0, 0, 0, .7);
 	border: 1px solid rgba(0, 0, 0, .1);
-	border-top: 6px solid #009ee3;
+	border-top: 6px solid #1a66b3;
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 }
