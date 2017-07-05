@@ -31,7 +31,7 @@
 							<p>Tel : (0755)88824588</p>
 							<p>E-mail : <a href="mailto:cs@linkchina.com.cn">cs@linkchina.com.cn</a></p>
 							<p>Website: <a href="http://www.linkchina.com.cn/">www.linkchina.com.cn</a></p>
-							<p>ADD : 深圳市南山区沙河西路3011号白沙科技产业园1栋8楼B-V区</p>
+							<p>ADD : 深圳市南山區沙河西路3011號白沙科技產業園1棟8樓B-V區</p>
 						</div>
 					</div>
 				</div>

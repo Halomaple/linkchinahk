@@ -30,12 +30,12 @@ $(document).ready(function() {
 		},
 		basedConfigurations = {
 			hongkong: {
-				bandwidth: 2,
+				bandwidth: 10,
 				ips: 1,
 				defence: 5,
 				collocationMonth: 1,
 				collocationNumber: 1,
-				price: 650
+				price: 380
 			}
 		},
 		bandwidthSlider;
@@ -56,8 +56,31 @@ $(document).ready(function() {
 
 	function preSelectConfigurations() {
 		if (window.location.href.indexOf('configurations=1U') > -1) {
+			console.log('preselect');
 			$('.configuration-collocation-room a').first().click();
 			$('.configuration-collocation-size a').first().click();
+			$('.configuration-device-type a').first().click();
+
+			setMinBandWith(bandwidthSlider, basedConfigurations.hongkong.bandwidth);
+			syncBandwidth(bandwidthSlider, basedConfigurations.hongkong.bandwidth);
+
+			$('.configuration-ips a').first().click();
+			$('.configuration-defence a').first().click();
+			$('.configuration-month a').first().click();
+		} else if (window.location.href.indexOf('configurations=2U') > -1) {
+			$('.configuration-collocation-room a').first().click();
+			$('.configuration-collocation-size a')[1].click();
+			$('.configuration-device-type a').first().click();
+
+			setMinBandWith(bandwidthSlider, basedConfigurations.hongkong.bandwidth);
+			syncBandwidth(bandwidthSlider, basedConfigurations.hongkong.bandwidth);
+
+			$('.configuration-ips a').first().click();
+			$('.configuration-defence a').first().click();
+			$('.configuration-month a').first().click();
+		}else if(window.location.href.indexOf('configurations=whole') > -1){
+			$('.configuration-collocation-room a').first().click();
+			$('.configuration-collocation-size a')[1].click();
 			$('.configuration-device-type a').first().click();
 
 			setMinBandWith(bandwidthSlider, basedConfigurations.hongkong.bandwidth);

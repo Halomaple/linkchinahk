@@ -700,7 +700,7 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 	color: white;
 	position: absolute;
 	left: 50%;
-	bottom: 0;
+	bottom: 10px;
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
@@ -937,6 +937,9 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 
 .company-tab .nav-tabs li a {
 	padding: 5px 40px;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	display: block;
 }
 
 /*Recruit and contact*/
