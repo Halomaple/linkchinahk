@@ -95,44 +95,52 @@
 				</div>
 			</div>
 		</section>
+	</div><!--/row-->
+</div><!--/container-->
 
-		<section class="products clearfix">
+<section class="products clearfix">
+	<div class="container">
+		<div class="row">
 			<div class="sec-title text-center">
 				<h2>产品</h2>
 				<p></p>
 			</div>
 
 			<div class="col-md-4 col-sm-4 col-xs-12 text-center">
-				<div class="service-item">
+				<a class="service-item" href="http://linkchina.hk/gis">
 					<div class="service-icon">
 						<i class="fa fa-globe fa-5x"></i>
 					</div>
 					<h3>GIS</h3>
 					<p></p>
-				</div>
+				</a>
 			</div>
 
 			<div class="col-md-4 col-sm-4 col-xs-12 text-center">
-				<div class="service-item">
+				<a class="service-item" href="http://linkchina.hk/collocation/">
 					<div class="service-icon">
 						<i class="fa fa-pause fa-5x"></i>
 					</div>
 					<h3>服务器托管</h3>
 					<p></p>
-				</div>
+				</a>
 			</div>
 
 			<div class="col-md-4 col-sm-4 col-xs-12 text-center">
-				<div class="service-item">
+				<a class="service-item" href="http://www.internetcloud.com.cn/home.php">
 					<div class="service-icon">
 						<i class="fa fa-cloud fa-5x"></i>
 					</div>
 					<h3>云服务器</h3>
 					<p></p>
-				</div>
+				</a>
 			</div>
-		</section>
+		</div><!--/row-->
+	</div><!--/container-->
+</section>
 
+<div class="container">
+	<div class="row">
 		<section class="service clearfix">
 			<div class="sec-title text-center">
 				<h2>服务</h2>

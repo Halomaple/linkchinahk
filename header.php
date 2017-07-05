@@ -37,20 +37,20 @@
 
 		<script type="text/javascript">
 			// //temp
-			// if(window.location.href == 'http://linkchina.hk/en_US/'
-			// 	|| window.location.href == 'http://linkchina.hk/zh_CN/'
-			// 	|| window.location.href == 'http://linkchina.hk/zh_HK/'){
-			// 	window.location.href = window.location.href + 'home';
-			// }
+			if(window.location.href == 'http://linkchina.hk/en_US/'
+				|| window.location.href == 'http://linkchina.hk/zh_CN/'
+				|| window.location.href == 'http://linkchina.hk/zh_HK/'){
+				window.location.href = window.location.href + 'home';
+			}
 
-			// if(window.location.href == 'http://linkchina.hk/en_US/zh_HK/'
-			// 	|| window.location.href == 'http://linkchina.hk/en_US/zh_CN/'
-			// 	|| window.location.href == 'http://linkchina.hk/zh_HK/en_US/'
-			// 	|| window.location.href == 'http://linkchina.hk/zh_HK/zh_CN/'
-			// 	|| window.location.href == 'http://linkchina.hk/zh_CN/en_US/'
-			// 	|| window.location.href == 'http://linkchina.hk/zh_CN/zh_HK/'){
-			// 	window.location.href = window.location.href.slice(0, window.location.href.length - 6) + 'home';
-			// }
+			if(window.location.href == 'http://linkchina.hk/en_US/zh_HK/'
+				|| window.location.href == 'http://linkchina.hk/en_US/zh_CN/'
+				|| window.location.href == 'http://linkchina.hk/zh_HK/en_US/'
+				|| window.location.href == 'http://linkchina.hk/zh_HK/zh_CN/'
+				|| window.location.href == 'http://linkchina.hk/zh_CN/en_US/'
+				|| window.location.href == 'http://linkchina.hk/zh_CN/zh_HK/'){
+				window.location.href = window.location.href.slice(0, window.location.href.length - 6) + 'home';
+			}
 		</script>
 
 		<script>
@@ -79,7 +79,7 @@
 
 		<!--Customized css-->
 		<link href="<?php bloginfo('template_directory'); ?>/css/bootsnav.css" rel="stylesheet"/>
-		<link href="<?php bloginfo('template_directory'); ?>/style.css?v=1.0.5" rel="stylesheet"/>
+		<link href="<?php bloginfo('template_directory'); ?>/style.css?v=1.0.6" rel="stylesheet"/>
 	</head>
 
 	<body>

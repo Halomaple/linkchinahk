@@ -518,7 +518,7 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 /*Services*/
 .access > div,
 .collocation > div,
-.products > div {
+.products > a {
 	margin: 20px 0;
 }
 
@@ -601,6 +601,7 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 	background-image: url(images/indexImages/product-bg.jpg);
 	position: relative;
 	padding: 50px 20px;
+	text-align: center;
 }
 
 .products:before {
@@ -613,6 +614,10 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 	width: 100%;
 	min-height: 500px;
 	background-color: rgba(15, 155, 224, 0.78);
+}
+
+.products .container {
+	margin: 20px auto;
 }
 
 .products .sec-title {
@@ -628,6 +633,7 @@ nav.navbar.bootsnav .navbar-collapse.in span.caret {
 	padding-top: 50px;
 	background-color: rgba(250, 250, 250, 0.3);
 	border: 2px solid transparent;
+	display: block;
 }
 
 .products .service-item:hover {
