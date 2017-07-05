@@ -223,6 +223,10 @@ nav.navbar.bootsnav li.dropdown ul.dropdown-menu {
 	border-top-right-radius: 0;
 }
 
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li > a {
+	color: white;
+}
+
 nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li > a:hover {
 	color: #009ee3;
 	text-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
