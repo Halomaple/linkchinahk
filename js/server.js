@@ -60,7 +60,15 @@ $(document).ready(function() {
 				defence: 5,
 				collocationMonth: 1,
 				collocationNumber: 1,
-				price: 650
+				price: 650,
+				whole: {
+					bandwidth: 100,
+					ips: 32,
+					defence: 5,
+					collocationMonth: 1,
+					collocationNumber: 1,
+					price: 36000,
+				}
 			},
 			{
 				bandwidth: 5,
@@ -103,7 +111,8 @@ $(document).ready(function() {
 			collocationNumber: 1,
 			price: 380
 		},
-		bandwidthSlider;
+		bandwidthSlider,
+		wholeSizeNum = 2;
 
 	initializeConfiguration();
 
@@ -121,17 +130,21 @@ $(document).ready(function() {
 
 	function firstSelectConfigurations() {
 		if (window.location.href.indexOf('configurations=1U') > -1) {
-			preSelectBasicConfigurations(2);
+			$('.configuration-collocation-room a').get(2).click();
+			$('.configuration-collocation-size a').get(0).click();
+			preSelectBasicConfigurations();
 		} else if (window.location.href.indexOf('configurations=2U') > -1) {
-			preSelectBasicConfigurations(2, 1);
+			$('.configuration-collocation-room a').get(2).click();
+			$('.configuration-collocation-size a').get(1).click();
+			preSelectBasicConfigurations();
 		} else if (window.location.href.indexOf('configurations=whole') > -1) {
-			preSelectBasicConfigurations(2, 2);
+			$('.configuration-collocation-room a').get(2).click();
+			$('.configuration-collocation-size a').get(wholeSizeNum).click();
+			preSelectBasicConfigurations();
 		}
 	}
 
-	function preSelectBasicConfigurations(roomId, sizeNum) {
-		$('.configuration-collocation-room a').get(roomId).click();
-		$('.configuration-collocation-size a').get(sizeNum ? sizeNum : 0).click();
+	function preSelectBasicConfigurations() {
 		$('.configuration-device-type a').first().click();
 
 		setMinBandWith(bandwidthSlider, basedConfigurations.bandwidth);
@@ -141,20 +154,14 @@ $(document).ready(function() {
 		$('.configuration-month a').first().click();
 	}
 
-	function setBasicConfigurations() {
-		basedConfigurations = basedConfigurationsList[selectedConfigurations.collocationRoom.id];
-		preSelectBasicConfigurations(selectedConfigurations.collocationRoom.id);
-	}
-
-	function activeCurrentButton(element) {
-		$(element).siblings().removeClass('btn-primary');
-		$(element).addClass('btn-primary');
-	}
-
-	function addTabIndex(element) {
-		$(element).attr({
-			'tabindex': 0
-		});
+	function setBasicConfigurations(sizeNum) {
+		if (sizeNum === wholeSizeNum) {
+			basedConfigurations = basedConfigurationsList[roomId].whole;
+			preSelectBasicConfigurations(wholeSizeNum);
+		} else {
+			basedConfigurations = basedConfigurationsList[roomId];
+			preSelectBasicConfigurations(roomId);
+		}
 	}
 
 	function initializeCollocationRoom() {
@@ -196,6 +203,7 @@ $(document).ready(function() {
 				return r.name == $(element).text();
 			})[0].id;
 
+			setBasicConfigurations(selectedConfigurations.collocationSize.id);
 			calculateTotalPrice();
 		});
 	}
@@ -395,5 +403,16 @@ $(document).ready(function() {
 		}
 
 		return useBasePrice;
+	}
+
+	function activeCurrentButton(element) {
+		$(element).siblings().removeClass('btn-primary');
+		$(element).addClass('btn-primary');
+	}
+
+	function addTabIndex(element) {
+		$(element).attr({
+			'tabindex': 0
+		});
 	}
 });
