@@ -14,10 +14,10 @@
 							<div class="clearfix configuration-collocation-room">
 								<h4>机房区域：</h4>
 								<a class="btn btn-default">香港</a>
-								<!--a class="btn btn-default">深圳</a>
+								<a class="btn btn-default">深圳</a>
 								<a class="btn btn-default">江苏</a>
 								<a class="btn btn-default">东莞</a>
-								<a class="btn btn-default">湖南</a-->
+								<a class="btn btn-default">湖南</a>
 							</div>
 
 							<div class="clearfix configuration-collocation-size">
