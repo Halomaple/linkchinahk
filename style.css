@@ -574,13 +574,16 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 .collocation-item-title {
 	font-size: 25px;
 	font-weight: 600;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .collocation-item-price {
 	min-height: 80px;
 	font-size: 30px;
 	background: #eee;
-	line-height: 110px;
+	padding-top: 20px;
 }
 
 .collocation-item-price:hover,

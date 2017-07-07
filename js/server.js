@@ -154,13 +154,13 @@ $(document).ready(function() {
 		$('.configuration-month a').first().click();
 	}
 
-	function setBasicConfigurations(sizeNum) {
-		if (sizeNum === wholeSizeNum) {
-			basedConfigurations = basedConfigurationsList[roomId].whole;
-			preSelectBasicConfigurations(wholeSizeNum);
+	function setBasicConfigurations() {
+		if (selectedConfigurations.collocationSize.id === wholeSizeNum) {
+			basedConfigurations = basedConfigurationsList[selectedConfigurations.collocationRoom.id].whole;
+			preSelectBasicConfigurations();
 		} else {
-			basedConfigurations = basedConfigurationsList[roomId];
-			preSelectBasicConfigurations(roomId);
+			basedConfigurations = basedConfigurationsList[selectedConfigurations.collocationRoom.id];
+			preSelectBasicConfigurations();
 		}
 	}
 
@@ -179,6 +179,9 @@ $(document).ready(function() {
 			selectedConfigurations.collocationRoom.id = configurationsList.collocationRooms.filter(function(r) {
 				return r.name == $(element).text();
 			})[0].id;
+
+			selectedConfigurations.collocationSize.id = 0;
+			$('.configuration-collocation-size a').get(selectedConfigurations.collocationSize.id).click();
 
 			setBasicConfigurations();
 			calculateTotalPrice();
@@ -203,7 +206,7 @@ $(document).ready(function() {
 				return r.name == $(element).text();
 			})[0].id;
 
-			setBasicConfigurations(selectedConfigurations.collocationSize.id);
+			setBasicConfigurations();
 			calculateTotalPrice();
 		});
 	}
@@ -334,9 +337,20 @@ $(document).ready(function() {
 	function setMinBandWith(bandwidthSlider, value) {
 		bandwidthSlider.slider('setAttribute', 'min', value);
 		bandwidthSlider.slider('setAttribute', 'value', value);
-		bandwidthSlider.slider('setAttribute', 'ticks', [value, 100, 200, 300, 400, 500, 1000]);
-		bandwidthSlider.slider('setAttribute', 'ticks_labels', [value + 'M', '100M', '200M', '300M', '400M', '500M', '1000M']);
-		$('.slider-tick-label')[0].innerHTML = value + 'M';
+		if (value < 100) {
+			bandwidthSlider.slider('setAttribute', 'ticks', [value, 100, 200, 300, 400, 500, 1000]);
+			bandwidthSlider.slider('setAttribute', 'ticks_labels', [value + 'M', '100M', '200M', '300M', '400M', '500M', '1000M']);
+			//bandwidthSlider.slider('setAttribute', 'ticks_positions', [0, 10, 20, 30, 50, 70, 100]);
+		} else {
+			console.log(value, 'value');
+			bandwidthSlider.slider('setAttribute', 'ticks', [value, 200, 300, 400, 500, 1000]);
+			bandwidthSlider.slider('setAttribute', 'ticks_labels', [value + 'M', '200M', '300M', '400M', '500M', '1000M']);
+			bandwidthSlider.slider('setAttribute', 'ticks_positions', [0, 10, 20, 50, 70, 100]);
+			console.log(bandwidthSlider.slider('getAttribute', 'ticks_labels'));
+			console.log(bandwidthSlider.slider('getAttribute', 'ticks_positions'));
+			console.log(bandwidthSlider.slider('getAttribute', 'ticks_positions'));
+			//$('.slider-tick-label')[0].innerHTML = value + 'M';
+		}
 
 		$('#bandwith-value').attr({
 			'min': value
