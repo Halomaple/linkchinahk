@@ -76,7 +76,15 @@ $(document).ready(function() {
 				defence: 5,
 				collocationMonth: 1,
 				collocationNumber: 1,
-				price: 500
+				price: 500,
+				whole: {
+					bandwidth: 100,
+					ips: 32,
+					defence: 5,
+					collocationMonth: 1,
+					collocationNumber: 1,
+					price: 9800,
+				}
 			},
 			{
 				bandwidth: 10,
@@ -84,7 +92,15 @@ $(document).ready(function() {
 				defence: 5,
 				collocationMonth: 1,
 				collocationNumber: 1,
-				price: 380
+				price: 380,
+				whole: {
+					bandwidth: 100,
+					ips: 32,
+					defence: 5,
+					collocationMonth: 1,
+					collocationNumber: 1,
+					price: 5700,
+				}
 			},
 			{
 				bandwidth: 5,
@@ -92,7 +108,15 @@ $(document).ready(function() {
 				defence: 5,
 				collocationMonth: 1,
 				collocationNumber: 1,
-				price: 460
+				price: 460,
+				whole: {
+					bandwidth: 100,
+					ips: 32,
+					defence: 5,
+					collocationMonth: 1,
+					collocationNumber: 1,
+					price: 8500,
+				}
 			},
 			{
 				bandwidth: 5,
@@ -100,7 +124,15 @@ $(document).ready(function() {
 				defence: 5,
 				collocationMonth: 1,
 				collocationNumber: 1,
-				price: 400
+				price: 400,
+				whole: {
+					bandwidth: 100,
+					ips: 32,
+					defence: 5,
+					collocationMonth: 1,
+					collocationNumber: 1,
+					price: 6500,
+				}
 			}
 		],
 		basedConfigurations = {
@@ -141,6 +173,10 @@ $(document).ready(function() {
 			$('.configuration-collocation-room a').get(2).click();
 			$('.configuration-collocation-size a').get(wholeSizeNum).click();
 			preSelectBasicConfigurations();
+		} else if(window.location.href.indexOf('/server') > -1){
+			$('.configuration-collocation-room a').get(0).click();
+			$('.configuration-collocation-size a').get(0).click();
+			preSelectBasicConfigurations();
 		}
 	}
 
@@ -149,7 +185,12 @@ $(document).ready(function() {
 
 		setMinBandWith(bandwidthSlider, basedConfigurations.bandwidth);
 
-		$('.configuration-ips a').first().click();
+		$('.configuration-ips a').each(function(index, element){
+			if(basedConfigurations.ips == /[0-9]*/.exec($(element).text())[0]){
+				$('.configuration-ips a')[index].click();
+			}
+		});
+
 		$('.configuration-defence a').first().click();
 		$('.configuration-month a').first().click();
 	}
@@ -337,20 +378,17 @@ $(document).ready(function() {
 	function setMinBandWith(bandwidthSlider, value) {
 		bandwidthSlider.slider('setAttribute', 'min', value);
 		bandwidthSlider.slider('setAttribute', 'value', value);
-		if (value < 100) {
-			bandwidthSlider.slider('setAttribute', 'ticks', [value, 100, 200, 300, 400, 500, 1000]);
-			bandwidthSlider.slider('setAttribute', 'ticks_labels', [value + 'M', '100M', '200M', '300M', '400M', '500M', '1000M']);
-			//bandwidthSlider.slider('setAttribute', 'ticks_positions', [0, 10, 20, 30, 50, 70, 100]);
-		} else {
-			console.log(value, 'value');
-			bandwidthSlider.slider('setAttribute', 'ticks', [value, 200, 300, 400, 500, 1000]);
-			bandwidthSlider.slider('setAttribute', 'ticks_labels', [value + 'M', '200M', '300M', '400M', '500M', '1000M']);
-			bandwidthSlider.slider('setAttribute', 'ticks_positions', [0, 10, 20, 50, 70, 100]);
-			console.log(bandwidthSlider.slider('getAttribute', 'ticks_labels'));
-			console.log(bandwidthSlider.slider('getAttribute', 'ticks_positions'));
-			console.log(bandwidthSlider.slider('getAttribute', 'ticks_positions'));
-			//$('.slider-tick-label')[0].innerHTML = value + 'M';
-		}
+		bandwidthSlider.slider('setAttribute', 'ticks', [value, 200, 300, 400, 500, 1000]);
+		bandwidthSlider.slider('setAttribute', 'ticks_positions', [0, 20, 30, 50, 70, 100]);
+
+		var labels = [value + 'M', '200M', '300M', '400M', '500M', '1000M'];
+		bandwidthSlider.slider('setAttribute', 'ticks_labels', labels);
+
+		$('.slider-tick-label').empty();
+
+		labels.forEach(function(label, index) {
+			$('.slider-tick-label')[index].innerHTML = label;
+		});
 
 		$('#bandwith-value').attr({
 			'min': value
@@ -366,7 +404,9 @@ $(document).ready(function() {
 			(selectedConfigurations.bandwidth - basedConfigurations.bandwidth) * pricesList[selectedConfigurations.collocationRoom.id].bandwidthPrice +
 			(selectedConfigurations.ips - basedConfigurations.ips) * pricesList[selectedConfigurations.collocationRoom.id].ipPrice +
 			(selectedConfigurations.defence - basedConfigurations.defence) * pricesList[selectedConfigurations.collocationRoom.id].defencePrice
-		) * selectedConfigurations.collocationMonth * selectedConfigurations.collocationNumber;
+		);
+
+		price = price * selectedConfigurations.collocationMonth * selectedConfigurations.collocationNumber;
 
 		return price;
 	}

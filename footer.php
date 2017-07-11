@@ -66,7 +66,7 @@
 
 				function logIp() {
 					//limit ip access
-					var allowIPList = ['103.72.166.84', '103.44.62.144', '183.2.185.59', '117.136.79.147', '113.118.234.161'];
+					var allowIPList = ['103.72.166.84', '103.44.62.144', '183.2.185.59', '117.136.79.147', '121.35.189.65'];
 
 					if (!returnCitySN["cip"] || allowIPList.indexOf(returnCitySN["cip"]) == -1) {
 						$('body').empty();
