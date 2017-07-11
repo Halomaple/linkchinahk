@@ -139,6 +139,10 @@ li {
 	display: inline-block;
 }
 
+.invisible {
+	visibility: hidden;
+}
+
 /*Overwritting Bootstrap styles*/
 a.btn,
 .btn:focus,
@@ -899,8 +903,55 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 	margin: 0 10px;
 }
 
+.buy-button-container {
+	margin: 10px 0;
+}
+
 .server-buy-button {
 	margin: 20px;
+}
+
+.configuration-confirm-modal {
+	background: #fff;
+	display: none;
+	padding: 0 10px;
+	width: 400px;
+	height: 550px;
+	text-align: center;
+	max-width: 100%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	z-index: 10000;
+	box-shadow: 0 0 20px 2px #999;
+}
+
+.configuration-confirm-modal .wpcf7 {
+	padding: 10px;
+}
+
+.configuration-confirm-modal .wpcf7 textarea {
+	height: 80px;
+}
+
+.configuration-confirm-modal .input-group  .input-group-addon {
+	min-width: 200px;
+	text-align: right;
+}
+
+.configuration-confirm-close {
+	display: block;
+	text-align: right;
+}
+
+.configuration-confirm-close i {
+	transform: scale(1.3);
+}
+
+.hidden-configuration-list {
+	height: 0;
+	visibility: hidden;
 }
 
 @media(max-width:992px) {

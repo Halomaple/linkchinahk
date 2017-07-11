@@ -157,6 +157,8 @@ $(document).ready(function() {
 		initializeDefence();
 		initializeCollocationMonth();
 		initializeCollocationNumber();
+		initializeBuyButtonAction();
+		initializeCloseConfigurationConfirmModalButton();
 		firstSelectConfigurations();
 	}
 
@@ -178,6 +180,11 @@ $(document).ready(function() {
 			$('.configuration-collocation-size a').get(0).click();
 			preSelectBasicConfigurations();
 		}
+
+		if ($('.configuration-confirm-modal')[0].innerHTML.indexOf('wpcf7-response-output wpcf7-mail-sent-ok') > -1) {
+			alert($('.success-message').text());
+			window.location.href = window.location.href.split('#')[0];
+		}
 	}
 
 	function preSelectBasicConfigurations() {
@@ -191,8 +198,10 @@ $(document).ready(function() {
 				enableIPButtonClick = true;
 				$('.configuration-ips a')[index].click();
 			}
-			if(!enableIPButtonClick){
-				$(element).attr({'disabled':true});
+			if (!enableIPButtonClick) {
+				$(element).attr({
+					'disabled': true
+				});
 			}
 		});
 
@@ -203,8 +212,10 @@ $(document).ready(function() {
 				enableDefenceButtonClick = true;
 				$('.configuration-defence a')[index].click();
 			}
-			if(!enableDefenceButtonClick){
-				$(element).attr({'disabled':true});
+			if (!enableDefenceButtonClick) {
+				$(element).attr({
+					'disabled': true
+				});
 			}
 		});
 
@@ -237,6 +248,8 @@ $(document).ready(function() {
 				return r.name == $(element).text();
 			})[0].id;
 
+			selectedConfigurations.collocationRoom.name = $(element).text();
+
 			selectedConfigurations.collocationSize.id = 0;
 			$('.configuration-collocation-size a').get(selectedConfigurations.collocationSize.id).click();
 
@@ -263,6 +276,8 @@ $(document).ready(function() {
 				return r.name == $(element).text();
 			})[0].id;
 
+			selectedConfigurations.collocationSize.name = $(element).text();
+
 			setBasicConfigurations();
 			calculateTotalPrice();
 		});
@@ -285,6 +300,8 @@ $(document).ready(function() {
 			selectedConfigurations.deviceType.id = configurationsList.deviceTypes.filter(function(r) {
 				return r.name == $(element).text();
 			})[0].id;
+
+			selectedConfigurations.deviceType.name = $(element).text();
 
 			calculateTotalPrice();
 		});
@@ -331,7 +348,7 @@ $(document).ready(function() {
 		});
 
 		$('.configuration-ips a').click(function(event) {
-			if($(this).attr('disabled'))
+			if ($(this).attr('disabled') || $(this).attr('disabled') == 'disabled')
 				return;
 
 			activeCurrentButton(this);
@@ -347,7 +364,7 @@ $(document).ready(function() {
 		});
 
 		$('.configuration-defence a').click(function(event) {
-			if($(this).attr('disabled'))
+			if ($(this).attr('disabled'))
 				return;
 
 			activeCurrentButton(this);
@@ -385,6 +402,50 @@ $(document).ready(function() {
 		});
 	}
 
+	function initializeBuyButtonAction() {
+		$('.configuration-confirm-modal').hide();
+
+		toggleSendButtonStatusAccordingToEmail();
+
+		$('.server-buy-button').click(function() {
+			$('.configuration-confirm-modal').show();
+
+			$('.configuration-list input.room-value').val(selectedConfigurations.collocationRoom.name);
+			$('.configuration-list input.size-value').val(selectedConfigurations.collocationSize.name);
+			$('.configuration-list input.type-value').val(selectedConfigurations.deviceType.name);
+			$('.configuration-list input.bandwidth-value').val(selectedConfigurations.bandwidth + 'M');
+			$('.configuration-list input.ips-value').val(selectedConfigurations.ips + $('.configuration-list input.ips-value').attr('placeholder'));
+			$('.configuration-list input.defence-value').val(selectedConfigurations.defence + 'G');
+			$('.configuration-list input.month-value').val(selectedConfigurations.collocationMonth + $('.configuration-list input.month-value').attr('placeholder'));
+			$('.configuration-list input.number-value').val(selectedConfigurations.collocationNumber + $('.configuration-list input.number-value').attr('placeholder'));
+
+			var configurationsList = '';
+			$('.configuration-confirm-modal .input-group').each(function(index, element) {
+				configurationsList += $(element).children('span').text() + $(element).children('input').val() + '\r\n';
+			});
+
+			$('.hidden-configuration-list textarea').val(configurationsList);
+		});
+	}
+
+	function toggleSendButtonStatusAccordingToEmail(){
+		$('.configuration-confirm-modal input[type="email"]').on('keyup', function(event) {
+			if ($(this).val().search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) == -1) {
+				$('input.wpcf7-form-control.wpcf7-submit').attr({
+					disabled: 'disabled'
+				});
+			} else {
+				$('input.wpcf7-form-control.wpcf7-submit').removeAttr('disabled');
+			}
+		});
+	}
+
+	function initializeCloseConfigurationConfirmModalButton() {
+		$('.configuration-confirm-close i').click(function() {
+			$('.configuration-confirm-modal').hide();
+		});
+	}
+
 	function getNumberFromText(text) {
 		return parseInt(/[0-9]*/.exec(text)[0]);
 	}
@@ -414,7 +475,7 @@ $(document).ready(function() {
 			labels.forEach(function(label, index) {
 				$('.slider-tick-label')[index].innerHTML = label;
 			});
-		}else{
+		} else {
 			bandwidthSlider.slider('setAttribute', 'ticks', [value, 100, 200, 300, 400, 500, 1000]);
 			bandwidthSlider.slider('setAttribute', 'ticks_positions', [0, 20, 40, 50, 60, 70, 100]);
 
@@ -483,7 +544,7 @@ $(document).ready(function() {
 
 	function calculateTotalPrice() {
 		var price = buildTotalPrice();
-		$('.total-price-box input').val(formatTotalPrice(price));
+		$('.total-price-box input.total-price').val(formatTotalPrice(price));
 	}
 
 	function useBasePriceCheckFn(basedConfigurationsItem) {

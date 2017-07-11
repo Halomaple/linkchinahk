@@ -120,4 +120,49 @@
 				</section>
 			</div><!--/row-->
 		</div><!--/container-->
+
+		<div class="configuration-confirm-modal">
+			<div class="configuration-list">
+				<span class="configuration-confirm-close">
+					<i class="glyphicon glyphicon-remove pointer"></i>
+				</span>
+				<div class="input-group">
+					<span class="input-group-addon">机房区域：</span>
+					<input type="text" class="form-control room-value" readonly="readonly">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon">托管规格：</span>
+					<input type="text" class="form-control size-value" readonly="readonly">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon">设备类型：</span>
+					<input type="text" class="form-control type-value" readonly="readonly">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon">独享宽带：</span>
+					<input type="text" class="form-control bandwidth-value" readonly="readonly">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon">独立IP：</span>
+					<input type="text" class="form-control ips-value" placeholder="个" readonly="readonly">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon">防御峰值：</span>
+					<input type="text" class="form-control defence-value" readonly="readonly">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon">托管时长：</span>
+					<input type="text" class="form-control month-value"  placeholder="月" readonly="readonly">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon">购买数量：</span>
+					<input type="text" class="form-control number-value" placeholder="台" readonly="readonly">
+				</div>
+			</div>
+			<?php echo do_shortcode('[contact-form-7 id="741" title="托管配置单"]');?>
+		</div>
+
+		<div class="invisible">
+			<p class="success-message">我们已成功收到您的清单，将会尽快处理！</p>
+		</div>
 <?php get_footer(); ?>
