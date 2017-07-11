@@ -140,6 +140,13 @@ li {
 }
 
 /*Overwritting Bootstrap styles*/
+a.btn,
+.btn:focus,
+.btn:active,
+.btn:hover {
+	outline: none;
+}
+
 .btn-primary {
 	background-color: #1a66b3;
 	border-color: #1a66b3;

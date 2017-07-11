@@ -173,7 +173,7 @@ $(document).ready(function() {
 			$('.configuration-collocation-room a').get(2).click();
 			$('.configuration-collocation-size a').get(wholeSizeNum).click();
 			preSelectBasicConfigurations();
-		} else if(window.location.href.indexOf('/server') > -1){
+		} else if (window.location.href.indexOf('/server') > -1) {
 			$('.configuration-collocation-room a').get(0).click();
 			$('.configuration-collocation-size a').get(0).click();
 			preSelectBasicConfigurations();
@@ -185,13 +185,29 @@ $(document).ready(function() {
 
 		setMinBandWith(bandwidthSlider, basedConfigurations.bandwidth);
 
-		$('.configuration-ips a').each(function(index, element){
-			if(basedConfigurations.ips == /[0-9]*/.exec($(element).text())[0]){
+		var enableIPButtonClick = false;
+		$('.configuration-ips a').each(function(index, element) {
+			if (basedConfigurations.ips == /[0-9]*/.exec($(element).text())[0]) {
+				enableIPButtonClick = true;
 				$('.configuration-ips a')[index].click();
+			}
+			if(!enableIPButtonClick){
+				$(element).attr({'disabled':true});
 			}
 		});
 
-		$('.configuration-defence a').first().click();
+
+		var enableDefenceButtonClick = false;
+		$('.configuration-defence a').each(function(index, element) {
+			if (basedConfigurations.defence == /[0-9]*/.exec($(element).text())[0]) {
+				enableDefenceButtonClick = true;
+				$('.configuration-defence a')[index].click();
+			}
+			if(!enableDefenceButtonClick){
+				$(element).attr({'disabled':true});
+			}
+		});
+
 		$('.configuration-month a').first().click();
 	}
 
@@ -282,7 +298,7 @@ $(document).ready(function() {
 			step: 1,
 			value: 1,
 			ticks: [1, 100, 200, 300, 400, 500, 1000],
-			ticks_positions: [0, 10, 20, 30, 50, 70, 100],
+			ticks_positions: [0, 30, 40, 50, 60, 80, 100],
 			ticks_labels: ['1M', '100M', '200M', '300M', '400M', '500M', '1000M'],
 			ticks_snap_bounds: 2,
 			formatter: function(value) {
@@ -315,6 +331,9 @@ $(document).ready(function() {
 		});
 
 		$('.configuration-ips a').click(function(event) {
+			if($(this).attr('disabled'))
+				return;
+
 			activeCurrentButton(this);
 
 			selectedConfigurations.ips = getNumberFromText($(this).text());
@@ -328,6 +347,9 @@ $(document).ready(function() {
 		});
 
 		$('.configuration-defence a').click(function(event) {
+			if($(this).attr('disabled'))
+				return;
+
 			activeCurrentButton(this);
 			selectedConfigurations.defence = getNumberFromText($(this).text());
 			calculateTotalPrice();
@@ -378,17 +400,33 @@ $(document).ready(function() {
 	function setMinBandWith(bandwidthSlider, value) {
 		bandwidthSlider.slider('setAttribute', 'min', value);
 		bandwidthSlider.slider('setAttribute', 'value', value);
-		bandwidthSlider.slider('setAttribute', 'ticks', [value, 200, 300, 400, 500, 1000]);
-		bandwidthSlider.slider('setAttribute', 'ticks_positions', [0, 20, 30, 50, 70, 100]);
 
-		var labels = [value + 'M', '200M', '300M', '400M', '500M', '1000M'];
-		bandwidthSlider.slider('setAttribute', 'ticks_labels', labels);
+		var labels = [];
+		if (value >= 100) {
+			bandwidthSlider.slider('setAttribute', 'ticks', [value, 200, 300, 400, 500, 1000]);
+			bandwidthSlider.slider('setAttribute', 'ticks_positions', [0, 30, 50, 70, 80, 100]);
 
-		$('.slider-tick-label').empty();
+			labels = [value + 'M', '200M', '300M', '400M', '500M', '1000M'];
+			bandwidthSlider.slider('setAttribute', 'ticks_labels', labels);
 
-		labels.forEach(function(label, index) {
-			$('.slider-tick-label')[index].innerHTML = label;
-		});
+			$('.slider-tick-label').empty();
+
+			labels.forEach(function(label, index) {
+				$('.slider-tick-label')[index].innerHTML = label;
+			});
+		}else{
+			bandwidthSlider.slider('setAttribute', 'ticks', [value, 100, 200, 300, 400, 500, 1000]);
+			bandwidthSlider.slider('setAttribute', 'ticks_positions', [0, 20, 40, 50, 60, 70, 100]);
+
+			labels = [value + 'M', '100M', '200M', '300M', '400M', '500M', '1000M'];
+			bandwidthSlider.slider('setAttribute', 'ticks_labels', labels);
+
+			$('.slider-tick-label').empty();
+
+			labels.forEach(function(label, index) {
+				$('.slider-tick-label')[index].innerHTML = label;
+			});
+		}
 
 		$('#bandwith-value').attr({
 			'min': value
