@@ -181,7 +181,7 @@ $(document).ready(function() {
 			preSelectBasicConfigurations();
 		}
 
-		if ($('.configuration-confirm-modal')[0].innerHTML.indexOf('wpcf7-response-output wpcf7-mail-sent-ok') > -1) {
+		if ($('.configuration-confirm-modal')[0] && $('.configuration-confirm-modal')[0].innerHTML.indexOf('wpcf7-response-output wpcf7-mail-sent-ok') > -1) {
 			alert($('.success-message').text());
 			window.location.href = window.location.href.split('#')[0];
 		}
@@ -191,6 +191,17 @@ $(document).ready(function() {
 		$('.configuration-device-type a').first().click();
 
 		setMinBandWith(bandwidthSlider, basedConfigurations.bandwidth);
+
+		preSelectIPs();
+		preSelectDefence();
+
+		$('.configuration-month a').first().click();
+	}
+
+	function preSelectIPs(){
+		$('.configuration-ips a').each(function(index, element){
+			$(element).removeAttr('disabled');
+		});
 
 		var enableIPButtonClick = false;
 		$('.configuration-ips a').each(function(index, element) {
@@ -204,7 +215,12 @@ $(document).ready(function() {
 				});
 			}
 		});
+	}
 
+	function preSelectDefence(){
+		$('.configuration-defence a').each(function(index, element){
+			$(element).removeAttr('disabled');
+		});
 
 		var enableDefenceButtonClick = false;
 		$('.configuration-defence a').each(function(index, element) {
@@ -216,10 +232,10 @@ $(document).ready(function() {
 				$(element).attr({
 					'disabled': true
 				});
+			} else {
+				$(element).removeAttr('disabled');
 			}
 		});
-
-		$('.configuration-month a').first().click();
 	}
 
 	function setBasicConfigurations() {
@@ -428,7 +444,7 @@ $(document).ready(function() {
 		});
 	}
 
-	function toggleSendButtonStatusAccordingToEmail(){
+	function toggleSendButtonStatusAccordingToEmail() {
 		$('.configuration-confirm-modal input[type="email"]').on('keyup', function(event) {
 			if ($(this).val().search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) == -1) {
 				$('input.wpcf7-form-control.wpcf7-submit').attr({
