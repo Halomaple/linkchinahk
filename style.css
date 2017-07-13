@@ -92,7 +92,7 @@ header footer {
 }
 
 hr {
-	margin: 0;
+	margin: 10px 0;
 }
 
 ul {
@@ -125,6 +125,14 @@ li {
 
 .text-white {
 	color: white;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
 }
 
 .text-right {
@@ -603,7 +611,7 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 	color: white;
 }
 
-.collocation-item-buy{
+.collocation-item-buy {
 	padding: 0;
 }
 
@@ -1114,28 +1122,4 @@ input.wpcf7-form-control.wpcf7-file {
 		margin-top: 100px;
 	}
 
-}
-
-/*Baidu map*/
-
-/*Hide map for now*/
-.hm-t-container {
-	display: none !important;
-}
-
-.iw_poi_title {
-	color: #CC5522;
-	font-size: 14px;
-	font-weight: bold;
-	overflow: hidden;
-	padding-right: 13px;
-	white-space: nowrap
-}
-
-.iw_poi_content {
-	font: 12px arial, sans-serif;
-	overflow: visible;
-	padding-top: 4px;
-	white-space: -moz-pre-wrap;
-	word-wrap: break-word
 }
