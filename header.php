@@ -79,7 +79,7 @@
 
 		<!--Customized css-->
 		<link href="<?php bloginfo('template_directory'); ?>/css/bootsnav.css" rel="stylesheet"/>
-		<link href="<?php bloginfo('template_directory'); ?>/style.css?v=1.0.7" rel="stylesheet"/>
+		<link href="<?php bloginfo('template_directory'); ?>/style.css?v=1.0.8" rel="stylesheet"/>
 	</head>
 
 	<body>
