@@ -8,8 +8,8 @@ function generateMaps(){
 
 function createMapForSZ() {
 	var selectorId = "allmap-sz";
-	var pointX = 113.962711;
-	var pointY = 22.56812;
+	var pointX = 113.9632911;
+	var pointY = 22.567776;
 	var companyInfoLabel = "<b>联华世纪通信技术有限公司</b><br />白沙科技产业园1栋8楼B-V区";
 
 	createMap(selectorId, pointX, pointY, companyInfoLabel);
