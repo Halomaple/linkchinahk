@@ -10,7 +10,7 @@ function createMapForSZ() {
 	var selectorId = "allmap-sz";
 	var pointX = 113.962711;
 	var pointY = 22.56812;
-	var companyInfoLabel = "联华世纪通信技术有限公司<br />白沙科技产业园1栋8楼B-V区";
+	var companyInfoLabel = "<b>联华世纪通信技术有限公司</b><br />白沙科技产业园1栋8楼B-V区";
 
 	createMap(selectorId, pointX, pointY, companyInfoLabel);
 }
@@ -19,7 +19,7 @@ function createMapForHk() {
 	var selectorId = "allmap-hk";
 	var pointX = 114.180465;
 	var pointY = 22.32325;
-	var companyInfoLabel = "聯華電信國際有限公司<br />旺角银高国际大厦9楼A1室";
+	var companyInfoLabel = "<b>聯華電信國際有限公司</b><br />旺角银高国际大厦9楼A1室";
 
 	createMap(selectorId, pointX, pointY, companyInfoLabel);
 }
@@ -39,7 +39,7 @@ function createMap(selectorId, pointX, pointY, labelText) {
 		offset: new BMap.Size(20, -10)
 	});
 	label.setStyle({
-		color: "red",
+		color: "#bb0000",
 		fontSize: "14px",
 		fontFamily: "微软雅黑",
 		minWidth: "200px",
