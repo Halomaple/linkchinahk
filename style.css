@@ -1123,3 +1123,21 @@ input.wpcf7-form-control.wpcf7-file {
 	}
 
 }
+
+#allmap-hk {
+	width: 100%;
+	height: auto;
+	min-height: 300px;
+	overflow: hidden;
+	margin: 0;
+	font-family: "微软雅黑";
+}
+
+#allmap-sz {
+	width: 100%;
+	height: auto;
+	min-height: 300px;
+	overflow: hidden;
+	margin: 0;
+	font-family: "微软雅黑";
+}
