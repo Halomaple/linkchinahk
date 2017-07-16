@@ -112,6 +112,7 @@ li {
 1. blue:#1a66b3
 2. light-blue:#009ee3;
 3. text-gray: #333;
+4. border-gray: #eee;
 */
 
 /*Helper classes*/
@@ -747,6 +748,7 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 
 /*Archives*/
 .archive {
+	margin: 20px 0;
 }
 
 .archive-post-item {
@@ -788,6 +790,10 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 
 .archive-post-time {
 	margin: 5px 0;
+}
+
+.archive-post-thumbnail {
+	border: 1px solid #eee;
 }
 
 .archive-post-thumbnail img {

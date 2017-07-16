@@ -6,10 +6,9 @@
 
 		<div class="content-container col-xs-12 col-sm-12 col-lg-12">
 			<h3>Result: <?php echo get_search_query(); ?></h3>
-			<?php while (have_posts()) : the_post(); 
-				if(!in_category('uncategorized')) {?>
-				<div class="archive col-xs-12 col-sm-6 col-md-6 col-lg-4">
-					<div class="archive-post-list" onclick="window.location.href='<?php the_permalink(); ?>'">
+			<?php while (have_posts()) : the_post(); ?>
+				<div class="archive col-xs-12 col-sm-6 col-md-6 col-lg-4 pointer">
+					<div class="archive-post-item" onclick="window.location.href='<?php the_permalink(); ?>'">
 						<div class="archive-post-thumbnail">
 							<?php
 							$first_image = catch_first_image();
@@ -45,8 +44,7 @@
 						</div>
 					</div><!-- /archive-post-list -->
 				</div>
-			<?php }
-			endwhile; ?>
+			<?php endwhile; ?>
 		</div>
 	</div><!--/row-->
 </div><!--/container-->

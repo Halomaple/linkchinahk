@@ -21,6 +21,9 @@
 			} else {
 				wp_title('', true);
 			} ?></title>
+
+
+		<?php $GLOBALS['File_Version_Control'] = '1.0.13' ?>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -33,10 +36,10 @@
 		<meta name="keywords" content="linkchinahk, 专线"/>
 		<meta name="description" content=""/>
 		<meta name="author" content="Jeff Doyle"/>
-		<meta name="Copyright" content="本站创作权权归Halomaple个人所有"/>
+		<meta name="Copyright" content="Halomaple"/>
 
 		<script type="text/javascript">
-			// //temp
+			//Navigation redirection fix
 			if(window.location.href == 'http://linkchina.hk/en_US/'
 				|| window.location.href == 'http://linkchina.hk/zh_CN/'
 				|| window.location.href == 'http://linkchina.hk/zh_HK/'){
@@ -76,10 +79,9 @@
 		<!-- Bootstrap slider -->
 		<link href="//cdn.bootcss.com/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" rel="stylesheet">
 
-
 		<!--Customized css-->
-		<link href="<?php bloginfo('template_directory'); ?>/css/bootsnav.css" rel="stylesheet"/>
-		<link href="<?php bloginfo('template_directory'); ?>/style.css?v=1.0.9" rel="stylesheet"/>
+		<link href="<?php bloginfo('template_directory'); ?>/css/bootsnav.css?version=<?php echo $GLOBALS['File_Version_Control']?>" rel="stylesheet"/>
+		<link href="<?php bloginfo('template_directory'); ?>/style.css?version=<?php echo $GLOBALS['File_Version_Control']?>" rel="stylesheet"/>
 	</head>
 
 	<body>
