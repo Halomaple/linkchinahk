@@ -663,6 +663,10 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 	border-color: white;
 }
 
+.products .container .row > div {
+	margin: 10px 0;
+}
+
 .products .service-item {
 	min-height: 300px;
 	padding-top: 50px;
