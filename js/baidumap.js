@@ -2,6 +2,8 @@
 generateMaps();
 
 function generateMaps(){
+	if(window.location.href.indexOf('contact-us') == -1) return;
+
 	createMapForSZ();
 	createMapForHk();
 }

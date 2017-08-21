@@ -3,24 +3,11 @@ $(document).ready(function() {
 	init();
 
 	function init() {
-		logIp();
 		contactFormCustomization();
 		adjustFlexSliderHeight();
 		changeNavigationLanguageText();
 		changePlaceholderInSearchBoxAccordingToSelectedLanguage();
 		switchTabOnCompanyPage();
-	}
-
-	function logIp() {
-		//limit ip access
-		var allowIPList = ['103.72.166.84', '103.44.62.144', '183.2.185.59', '117.136.79.147', '121.35.189.65', '183.11.129.156', '106.185.48.181', '120.80.57.52'];
-
-		if (!returnCitySN["cip"] || allowIPList.indexOf(returnCitySN["cip"]) == -1) {
-			$('body').empty();
-			$('body').append('<h3>LinkChina HK is upgrading.</h3>' +
-				'<p>If you have any questions, please call（852）55690674.</p>');
-		}
-		console.log('Your IP address is: ', returnCitySN['cip']);
 	}
 
 	function contactFormCustomization() {
