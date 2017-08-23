@@ -261,4 +261,177 @@ add_filter('tiny_mce_before_init', 'custum_fontfamily');
 
 //禁止validation来允许contact-form7 表单的from 邮箱非本域名
 add_filter( 'wpcf7_validate_configuration', '__return_false' );
+
+
+//服务器租用配置短码
+function colocation_shortcode_func($atts, $content) {
+	$EnglishHTML = '<section class="collocation clearfix">
+					<div class="sec-title text-center">
+						<h2>Colocation</h2>
+						<p>&nbsp;</p>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12 text-center">
+						<div class="service-item">
+							<ul class="list-group">
+								<li class="list-group-item collocation-item-title">1U hosting</li>
+								<li class="list-group-item collocation-item-price">￥380 / month</li>
+								<li class="list-group-item">1U managed specifications</li>
+								<li class="list-group-item">10M BGP Exclusive network</li>
+								<li class="list-group-item">One up Independent IP</li>
+								<li class="list-group-item">5G up Free defense peak</li>
+								<li class="list-group-item collocation-item-buy pointer"><a href="http://linkchina.hk/server/?configurations=1U">Buy</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12 text-center">
+						<div class="service-item">
+							<ul class="list-group">
+								<li class="list-group-item collocation-item-title">2U hosting</li>
+								<li class="list-group-item collocation-item-price">￥480 / month</li>
+								<li class="list-group-item">2U managed specifications</li>
+								<li class="list-group-item">10M BGP Exclusive network</li>
+								<li class="list-group-item">One up Independent IP</li>
+								<li class="list-group-item">5G up Free defense peak</li>
+								<li class="list-group-item collocation-item-buy pointer"><a href="http://linkchina.hk/server/?configurations=2U">Buy</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12 text-center">
+						<div class="service-item">
+							<ul class="list-group">
+								<li class="list-group-item collocation-item-title">Whole cabinet custody</li>
+								<li class="list-group-item collocation-item-price">￥5700 / 月</li>
+								<li class="list-group-item">Full cabinet hosting specification</li>
+								<li class="list-group-item">100M BGP Exclusive network</li>
+								<li class="list-group-item">32 up Independent IP</li>
+								<li class="list-group-item">5G up Free defense peak</li>
+								<li class="list-group-item collocation-item-buy pointer"><a href="http://linkchina.hk/server/?configurations=whole">Buy</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>' . $atts[0][type] . ' ';
+
+	$TraditionalHTML = '<section class="collocation clearfix">
+						<div class="sec-title text-center">
+							<h2>服務器托管</h2>
+							<p></p>
+						</div>
+
+						<div class="col-md-4 col-sm-4 col-xs-12 text-center">
+							<div class="service-item">
+								<ul class="list-group">
+									<li class="list-group-item collocation-item-title">1U 托管</li>
+									<li class="list-group-item collocation-item-price">￥380 / 月</li>
+									<li class="list-group-item">1U 托管規格</li>
+									<li class="list-group-item">10M BGP獨享網絡</li>
+									<li class="list-group-item">1個起 獨立IP</li>
+									<li class="list-group-item">5G起 免費防禦峰值</li>
+									<li class="list-group-item collocation-item-buy pointer">
+										<a href="http://linkchina.hk/server/?configurations=1U">立即搶購</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-4 col-xs-12 text-center">
+							<div class="service-item">
+								<ul class="list-group">
+									<li class="list-group-item collocation-item-title">2U 托管</li>
+									<li class="list-group-item collocation-item-price">￥480 / 月</li>
+									<li class="list-group-item">2U 托管規格</li>
+									<li class="list-group-item">10M BGP獨享網絡</li>
+									<li class="list-group-item">1個起 獨立IP</li>
+									<li class="list-group-item">5G起 免費防禦峰值</li>
+									<li class="list-group-item collocation-item-buy pointer">
+										<a href="http://linkchina.hk/server/?configurations=2U">立即搶購</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-4 col-xs-12 text-center">
+							<div class="service-item">
+								<ul class="list-group">
+									<li class="list-group-item collocation-item-title">整櫃托管</li>
+									<li class="list-group-item collocation-item-price">￥5700 / 月</li>
+									<li class="list-group-item">整櫃 托管規格</li>
+									<li class="list-group-item">100M BGP獨享網絡</li>
+									<li class="list-group-item">32個起 獨立IP</li>
+									<li class="list-group-item">5G起 免費防禦峰值</li>
+									<li class="list-group-item collocation-item-buy pointer">
+										<a href="http://linkchina.hk/server/?configurations=whole">立即搶購</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>';
+
+	$ChineseHTML = '<section class="collocation clearfix">
+						<div class="sec-title text-center">
+							<h2>服务器托管</h2>
+							<p></p>
+						</div>
+
+						<div class="col-md-4 col-sm-4 col-xs-12 text-center">
+							<div class="service-item">
+								<ul class="list-group">
+									<li class="list-group-item collocation-item-title">1U 托管</li>
+									<li class="list-group-item collocation-item-price">￥380 / 月</li>
+									<li class="list-group-item">1U 托管规格</li>
+									<li class="list-group-item">10M BGP独享网络</li>
+									<li class="list-group-item">1个起 独立IP</li>
+									<li class="list-group-item">5G起 免费防御峰值</li>
+									<li class="list-group-item collocation-item-buy pointer">
+										<a href="http://linkchina.hk/server/?configurations=1U">立即抢购</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-4 col-xs-12 text-center">
+							<div class="service-item">
+								<ul class="list-group">
+									<li class="list-group-item collocation-item-title">2U 托管</li>
+									<li class="list-group-item collocation-item-price">￥480 / 月</li>
+									<li class="list-group-item">2U 托管规格</li>
+									<li class="list-group-item">10M BGP独享网络</li>
+									<li class="list-group-item">1个起 独立IP</li>
+									<li class="list-group-item">5G起 免费防御峰值</li>
+									<li class="list-group-item collocation-item-buy pointer">
+										<a href="http://linkchina.hk/server/?configurations=2U">立即抢购</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-4 col-sm-4 col-xs-12 text-center">
+							<div class="service-item">
+								<ul class="list-group">
+									<li class="list-group-item collocation-item-title">整柜托管</li>
+									<li class="list-group-item collocation-item-price">￥5700 / 月</li>
+									<li class="list-group-item">整柜 托管规格</li>
+									<li class="list-group-item">100M BGP独享网络</li>
+									<li class="list-group-item">32个起 独立IP</li>
+									<li class="list-group-item">5G起 免费防御峰值</li>
+									<li class="list-group-item collocation-item-buy pointer">
+										<a href="http://linkchina.hk/server/?configurations=whole">立即抢购</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>';
+
+	switch (current($atts)) {
+		case 'English' :
+		return $EnglishHTML;
+
+		case 'Traditional':
+		return $TraditionalHTML;
+
+		case 'Chinese': 
+		return $ChineseHTML;
+	}
+}
+
+add_shortcode('colocation', 'colocation_shortcode_func');
 ?>

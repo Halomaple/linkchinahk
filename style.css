@@ -669,7 +669,7 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 }
 
 .products .service-item {
-	min-height: 300px;
+	min-height: 200px;
 	padding-top: 50px;
 	background-color: rgba(250, 250, 250, 0.3);
 	border: 2px solid transparent;
