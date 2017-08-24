@@ -81,9 +81,11 @@
 }
 
 /*Hide appearance*/
+#menu-appearance ul li:nth-child(1),
 #menu-appearance ul li:nth-child(2),
 #menu-appearance ul li:nth-child(3),
-#menu-appearance ul li:nth-child(5) {
+#menu-appearance ul li:nth-child(5), 
+.theme-browser {
 	display: none;
 }
 

@@ -23,7 +23,7 @@
 			} ?></title>
 
 
-		<?php $GLOBALS['File_Version_Control'] = '1.0.15' ?>
+		<?php $GLOBALS['File_Version_Control'] = '1.0.16' ?>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
