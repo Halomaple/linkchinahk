@@ -434,4 +434,12 @@ function colocation_shortcode_func($atts, $content) {
 }
 
 add_shortcode('colocation', 'colocation_shortcode_func');
+
+
+function cipFunction() {
+	return '<iframe src="http://lg.linkchina.hk" width="100%" height="500"></iframe>';
+}
+add_shortcode('cipiframe', 'cipFunction');
+
+
 ?>
