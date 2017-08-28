@@ -414,6 +414,7 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 
 /*Flexslider*/
 .flex-container {
+	display: none;
 	width: 100%;
 	margin-top: -80px;
 	border: none;

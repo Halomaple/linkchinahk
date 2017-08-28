@@ -54,7 +54,7 @@
                 <p></p>
             </div>
             
-            <div class="col-md-4 col-sm-4 col-xs-12 text-center">
+            <div class="col-md-3 col-sm-3 col-xs-12 text-center">
                 <a class="service-item" href="http://linkchina.hk/gis">
                     <div class="service-icon">
                         <i class="fa fa-globe fa-5x"></i>
@@ -63,8 +63,18 @@
                     <p></p>
                 </a>
             </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-12 text-center">
+                <a class="service-item" href="http://linkchina.hk/cip-easy-china-ip-easy/">
+                    <div class="service-icon">
+                        <i class="fa fa-refresh fa-5x"></i>
+                    </div>
+                    <h3>CIP</h3>
+                    <p></p>
+                </a>
+            </div>
             
-            <div class="col-md-4 col-sm-4 col-xs-12 text-center">
+            <div class="col-md-3 col-sm-3 col-xs-12 text-center">
                 <a class="service-item" href="http://linkchina.hk/collocation/">
                     <div class="service-icon">
                         <i class="fa fa-pause fa-5x"></i>
@@ -74,7 +84,7 @@
                 </a>
             </div>
             
-            <div class="col-md-4 col-sm-4 col-xs-12 text-center">
+            <div class="col-md-3 col-sm-3 col-xs-12 text-center">
                 <a class="service-item" href="http://www.internetcloud.com.cn/home.php">
                     <div class="service-icon">
                         <i class="fa fa-cloud fa-5x"></i>
@@ -119,11 +129,5 @@
                 </div>
             </div>
         </section>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        [cipiframe type="Chinese"]
     </div>
 </div>
