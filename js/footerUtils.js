@@ -35,6 +35,15 @@ $(document).ready(function() {
 		$('.mltlngg-menu-item-current > a').text($('.mltlngg-menu-item-current > a').text().replace('中国', '简体'));
 		$('.menu-item-231-zh_HK a').text($('.menu-item-231-zh_HK a').text().replace('香港', '繁体'));
 		$('.menu-item-231-zh_CN a').text($('.menu-item-231-zh_CN a').text().replace('中国', '简体'));
+
+		//Network tests menu item translations
+		if (window.location.href.indexOf('en_US') > -1) {
+			$('.menu-item-772 > a').text();
+		} else if (window.location.href.indexOf('zh_CN') > -1) {
+			$('.menu-item-772 > a').text('网络测试');
+		} else if(window.location.href.indexOf('zh_HK') > -1) {
+			$('.menu-item-772 > a').text('網絡測試');
+		}
 	}
 
 	function changePlaceholderInSearchBoxAccordingToSelectedLanguage() {
