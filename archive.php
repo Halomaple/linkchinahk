@@ -2,11 +2,14 @@
 
 <div class="container">
 	<div class="row">
-		<?php include(TEMPLATEPATH . '/includes/breadcrumb.php');?>
-
 		<div class="archive clearfix">
 		<?php while (have_posts()) : the_post(); ?>
-			<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3 pointer">
+
+			<?php if (in_category('idc')) { ?>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pointer idc-items">
+			<?php } else { ?>
+				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3 pointer">
+			<?php }?>
 				<div class="archive-post-item" onclick="window.location.href='<?php the_permalink(); ?>'">
 					<div class="archive-post-info">
 						<h5 class="archive-post-title">
@@ -36,13 +39,13 @@
 							<?php
 						} ?>
 					</div>
-				</div><!-- /archive-post-list -->
+				</div>
 			</div>
 		<?php endwhile;?>
 		</div>
 		<?php wp_pagenavi(); ?>
-	</div><!--/row-->
-</div><!--/container-->
+	</div>
+</div>
 <?php get_footer(); ?>
 
 

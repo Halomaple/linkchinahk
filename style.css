@@ -83,7 +83,7 @@ td,
 th,
 div,
 span,
-header footer {
+header {
 	word-break: break-all;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -97,11 +97,10 @@ hr {
 
 ul {
 	margin: 0;
-	padding: 0;
+	padding: 0 0 0 20px;
 }
 
 li {
-	list-style: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-o-user-select: none;
@@ -508,7 +507,7 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 }
 
 /*Section title */
-.main-content section {
+.main-content > div > div > section {
 	margin: 100px 0;
 }
 
@@ -802,6 +801,19 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 	height: 160px;
 }
 
+.idc-items .archive-post-thumbnail img {
+	height: 260px;
+}
+
+.idc-items .archive-post-item {
+	height: 395px;
+}
+
+.idc-items .archive-post-title {
+	text-align: center;
+	font-size: 200%;
+}
+
 /*Search*/
 .search-page-input {
 	display: inline-block;
@@ -853,6 +865,18 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 
 .blog-post-content img {
 	max-width: 100%;
+}
+
+.contact-us p,
+.contact-us a {
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-o-user-select: text;
+	user-select: text;
+}
+
+.contact-us .contact-form-content {
+	float: left;
 }
 
 /*Server*/
@@ -1078,6 +1102,14 @@ input.wpcf7-form-control.wpcf7-file {
 	background: #e4e4e4;
 	min-height: 300px;
 	padding-bottom: 30px;
+}
+
+.footer p,
+.footer a {
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-o-user-select: text;
+	user-select: text;
 }
 
 .footer-separator {

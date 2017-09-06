@@ -313,7 +313,7 @@ function colocation_shortcode_func($atts, $content) {
 
 	$TraditionalHTML = '<section class="collocation clearfix">
 						<div class="sec-title text-center">
-							<h2>服務器托管</h2>
+							<h2>伺服器託管</h2>
 							<p></p>
 						</div>
 

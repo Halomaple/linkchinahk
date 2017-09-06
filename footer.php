@@ -24,11 +24,11 @@
 					<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
 						<div class="footer-contact">
 							<p>TEL : (852)55690674</p>
-							<p>E-mail : <a href="mailto:cs@linkchina.com.cn">cs@linkchina.com.cn</a></p>
-							<p>Website : <a href="http://www.linkchina.hk/">linkchina.hk</a></p>
+							<p>E-mail : <a href="mailto:enquiryhk@linkchina.com.cn">enquiryhk@linkchina.com.cn</a></p>
+							<p>Website : <a href="http://www.linkchina.hk/">www.linkchina.hk</a></p>
 							<p>Address : FLAT/RM A1,9/F SILVERCORP INTERNATIONAL TOWER 707-713 NATHAN ROAD,MONGKOK,HONG KONG</p>
 							<hr />
-							<p>Tel : (0755)88824588</p>
+							<p>TEL : (0755)88824588</p>
 							<p>E-mail : <a href="mailto:cs@linkchina.com.cn">cs@linkchina.com.cn</a></p>
 							<p>Website: <a href="http://www.linkchina.com.cn/">www.linkchina.com.cn</a></p>
 							<p>ADD : 深圳市南山區沙河西路3011號白沙科技產業園1棟8樓B-V區</p>

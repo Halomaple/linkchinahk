@@ -39,10 +39,13 @@ $(document).ready(function() {
 		//Network tests menu item translations
 		if (window.location.href.indexOf('en_US') > -1) {
 			$('.menu-item-772 > a').text();
+			$('a[href="http://www.internetcloud.com.cn/server/buy.html"]').text('Cloud');
 		} else if (window.location.href.indexOf('zh_CN') > -1) {
 			$('.menu-item-772 > a').text('网络测试');
-		} else if(window.location.href.indexOf('zh_HK') > -1) {
+			$('a[href="http://www.internetcloud.com.cn/server/buy.html"]').text('云服务器');
+		} else if (window.location.href.indexOf('zh_HK') > -1) {
 			$('.menu-item-772 > a').text('網絡測試');
+			$('a[href="http://www.internetcloud.com.cn/server/buy.html"]').text('雲服務器');
 		}
 	}
 
