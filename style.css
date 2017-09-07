@@ -796,6 +796,7 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 	border: 1px solid #eee;
 }
 
+.archive-post-thumbnail,
 .archive-post-thumbnail img {
 	width: 100%;
 	height: 160px;
@@ -806,7 +807,7 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 }
 
 .idc-items .archive-post-item {
-	height: 395px;
+	height: 398px;
 }
 
 .idc-items .archive-post-title {
@@ -867,8 +868,7 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 	max-width: 100%;
 }
 
-.contact-us p,
-.contact-us a {
+.contact-us * {
 	-webkit-user-select: text;
 	-moz-user-select: text;
 	-o-user-select: text;
@@ -1104,8 +1104,7 @@ input.wpcf7-form-control.wpcf7-file {
 	padding-bottom: 30px;
 }
 
-.footer p,
-.footer a {
+.footer * {
 	-webkit-user-select: text;
 	-moz-user-select: text;
 	-o-user-select: text;

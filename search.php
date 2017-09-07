@@ -2,8 +2,6 @@
 
 <div class="container">
 	<div class="row">
-		<?php include(TEMPLATEPATH . '/includes/breadcrumb.php'); ?>
-
 		<div class="content-container col-xs-12 col-sm-12 col-lg-12">
 			<h3>Result: <?php echo get_search_query(); ?></h3>
 			<?php while (have_posts()) : the_post(); ?>
@@ -42,10 +40,10 @@
 								</a>
 							</div>
 						</div>
-					</div><!-- /archive-post-list -->
+					</div>
 				</div>
 			<?php endwhile; ?>
 		</div>
-	</div><!--/row-->
-</div><!--/container-->
+	</div>
+</div>
 <?php get_footer(); ?>

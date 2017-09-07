@@ -116,7 +116,7 @@ if (function_exists('add_image_size')) {
 //文章简要文字长度
 function new_excerpt_length($length)
 {
-    return 40;
+    return 100;
 }
 
 add_filter('excerpt_length', 'new_excerpt_length');
