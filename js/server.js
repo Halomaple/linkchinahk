@@ -149,6 +149,7 @@ $(document).ready(function() {
 	initializeConfiguration();
 
 	function initializeConfiguration() {
+		translatePage();
 		initializeCollocationRoom();
 		initializeCollocationSize();
 		initializeDeviceType();
@@ -160,6 +161,20 @@ $(document).ready(function() {
 		initializeBuyButtonAction();
 		initializeCloseConfigurationConfirmModalButton();
 		firstSelectConfigurations();
+	}
+
+	function translatePage(){
+		if(window.location.href.indexOf('en_US') > -1){
+			$('[english]').each(function(index, element){
+				$(element).text($(element).attr('english'));
+			});
+		}
+
+		if(window.location.href.indexOf('zh_HK') > -1){
+			$('[traditional]').each(function(index, element){
+				$(element).text($(element).attr('traditional'));
+			});
+		}
 	}
 
 	function firstSelectConfigurations() {
@@ -184,18 +199,6 @@ $(document).ready(function() {
 		if ($('.configuration-confirm-modal')[0] && $('.configuration-confirm-modal')[0].innerHTML.indexOf('wpcf7-response-output wpcf7-mail-sent-ok') > -1) {
 			alert($('.success-message').text());
 			window.location.href = window.location.href.split('#')[0];
-		}
-
-		if(window.location.href.indexOf('en_US') > -1){
-			$('[english]').each(function(index, element){
-				$(element).text($(element).attr('english'));
-			});
-		}
-
-		if(window.location.href.indexOf('zh_HK') > -1){
-			$('[traditional]').each(function(index, element){
-				$(element).text($(element).attr('traditional'));
-			});
 		}
 	}
 
