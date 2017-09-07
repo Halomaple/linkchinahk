@@ -185,6 +185,18 @@ $(document).ready(function() {
 			alert($('.success-message').text());
 			window.location.href = window.location.href.split('#')[0];
 		}
+
+		if(window.location.href.indexOf('en_US') > -1){
+			$('[english]').each(function(index, element){
+				$(element).text($(element).attr('english'));
+			});
+		}
+
+		if(window.location.href.indexOf('zh_HK') > -1){
+			$('[traditional]').each(function(index, element){
+				$(element).text($(element).attr('traditional'));
+			});
+		}
 	}
 
 	function preSelectBasicConfigurations() {
