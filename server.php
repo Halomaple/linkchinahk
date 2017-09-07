@@ -156,7 +156,7 @@
 				</div>
 				<div class="input-group">
 					<span class="input-group-addon" english="Purchase quantity:" traditional="購買數量：">购买数量：</span>
-					<input type="text" class="form-control number-value" placeholder="台" readonly="readonly">
+					<input type="text" class="form-control number-value" readonly="readonly">
 				</div>
 			</div>
 			<?php echo do_shortcode('[contact-form-7 id="741" title="托管配置单"]');?>

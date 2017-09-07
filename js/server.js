@@ -163,15 +163,44 @@ $(document).ready(function() {
 		firstSelectConfigurations();
 	}
 
-	function translatePage(){
-		if(window.location.href.indexOf('en_US') > -1){
-			$('[english]').each(function(index, element){
+	function translatePage() {
+		$('.contact-form-content p > b').each(function(i, e) {
+			switch (i) {
+				case 0:
+					$(e).attr({
+						english: 'Name:',
+						traditional: '稱呼：'
+					});
+					break;
+				case 1:
+					$(e).attr({
+						english: 'Email:',
+						traditional: '郵箱：'
+					});
+					break;
+				case 2:
+					$(e).attr({
+						english: 'Subject:',
+						traditional: '主題：'
+					});
+					break;
+				case 3:
+					$(e).attr({
+						english: 'Message:',
+						traditional: '留言：'
+					});
+					break;
+			}
+		});
+
+		if (window.location.href.indexOf('en_US') > -1) {
+			$('[english]').each(function(index, element) {
 				$(element).text($(element).attr('english'));
 			});
 		}
 
-		if(window.location.href.indexOf('zh_HK') > -1){
-			$('[traditional]').each(function(index, element){
+		if (window.location.href.indexOf('zh_HK') > -1) {
+			$('[traditional]').each(function(index, element) {
 				$(element).text($(element).attr('traditional'));
 			});
 		}
@@ -213,8 +242,8 @@ $(document).ready(function() {
 		$('.configuration-month a').first().click();
 	}
 
-	function preSelectIPs(){
-		$('.configuration-ips a').each(function(index, element){
+	function preSelectIPs() {
+		$('.configuration-ips a').each(function(index, element) {
 			$(element).removeAttr('disabled');
 		});
 
@@ -232,8 +261,8 @@ $(document).ready(function() {
 		});
 	}
 
-	function preSelectDefence(){
-		$('.configuration-defence a').each(function(index, element){
+	function preSelectDefence() {
+		$('.configuration-defence a').each(function(index, element) {
 			$(element).removeAttr('disabled');
 		});
 
@@ -447,8 +476,16 @@ $(document).ready(function() {
 			$('.configuration-list input.bandwidth-value').val(selectedConfigurations.bandwidth + 'M');
 			$('.configuration-list input.ips-value').val(selectedConfigurations.ips + $('.configuration-list input.ips-value').attr('placeholder'));
 			$('.configuration-list input.defence-value').val(selectedConfigurations.defence + 'G');
-			$('.configuration-list input.month-value').val(selectedConfigurations.collocationMonth + $('.configuration-list input.month-value').attr('placeholder'));
-			$('.configuration-list input.number-value').val(selectedConfigurations.collocationNumber + $('.configuration-list input.number-value').attr('placeholder'));
+
+			if (window.location.href.indexOf('en_US') > -1) {
+				$('.configuration-list input.month-value').val(selectedConfigurations.collocationMonth + ' Months');
+			} else if (window.location.href.indexOf('zh_HK') > -1) {
+				$('.configuration-list input.month-value').val(selectedConfigurations.collocationMonth + ' 個月');
+			} else {
+				$('.configuration-list input.month-value').val(selectedConfigurations.collocationMonth + '个月');
+			}
+
+			$('.configuration-list input.number-value').val(selectedConfigurations.collocationNumber);
 
 			var configurationsList = '';
 			$('.configuration-confirm-modal .input-group').each(function(index, element) {
