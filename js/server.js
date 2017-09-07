@@ -168,14 +168,14 @@ $(document).ready(function() {
 			switch (i) {
 				case 0:
 					$(e).attr({
-						english: 'Name:',
-						traditional: '稱呼：'
+						english: 'Name * :',
+						traditional: '稱呼 * ：'
 					});
 					break;
 				case 1:
 					$(e).attr({
-						english: 'Email:',
-						traditional: '郵箱：'
+						english: 'Email * :',
+						traditional: '郵箱 * ：'
 					});
 					break;
 				case 2:
