@@ -802,15 +802,15 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 	height: 160px;
 }
 
-.idc-items .archive-post-thumbnail img {
+.archive-items .archive-post-thumbnail img {
 	height: 260px;
 }
 
-.idc-items .archive-post-item {
+.archive-items .archive-post-item {
 	height: 398px;
 }
 
-.idc-items .archive-post-title {
+.archive-items .archive-post-title {
 	text-align: center;
 	font-size: 200%;
 }

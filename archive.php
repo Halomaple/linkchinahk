@@ -4,12 +4,7 @@
 	<div class="row">
 		<div class="archive clearfix">
 		<?php while (have_posts()) : the_post(); ?>
-
-			<?php if (in_category('idc')) { ?>
-				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pointer idc-items">
-			<?php } else { ?>
-				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3 pointer">
-			<?php }?>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pointer archive-items">
 				<div class="archive-post-item" onclick="window.location.href='<?php the_permalink(); ?>'">
 					<div class="archive-post-info">
 						<h5 class="archive-post-title">
