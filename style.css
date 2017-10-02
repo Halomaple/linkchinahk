@@ -792,14 +792,14 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 	margin: 5px 0;
 }
 
-.archive-post-thumbnail {
-	border: 1px solid #eee;
-}
-
 .archive-post-thumbnail,
 .archive-post-thumbnail img {
 	width: 100%;
 	height: 160px;
+}
+
+.archive-post-thumbnail img {
+	border: 1px solid #eee;
 }
 
 .archive-items .archive-post-thumbnail img {
@@ -813,6 +813,18 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 .archive-items .archive-post-title {
 	text-align: center;
 	font-size: 200%;
+}
+
+@media(min-width:1200px) {
+	.archive-post-item {
+		height: 38px;
+	}
+
+	.archive-post-thumbnail,
+	.archive-post-thumbnail img {
+		height: 260px;
+	}
+
 }
 
 /*Search*/
