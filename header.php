@@ -43,7 +43,7 @@
 			if(window.location.href == 'http://linkchina.hk/en_US/'
 				|| window.location.href == 'http://linkchina.hk/zh_CN/'
 				|| window.location.href == 'http://linkchina.hk/zh_HK/'){
-				window.location.href = window.location.href + 'home';
+				window.location.href = window.location.href + 'company';
 			}
 
 			if(window.location.href == 'http://linkchina.hk/en_US/zh_HK/'
@@ -52,7 +52,7 @@
 				|| window.location.href == 'http://linkchina.hk/zh_HK/zh_CN/'
 				|| window.location.href == 'http://linkchina.hk/zh_CN/en_US/'
 				|| window.location.href == 'http://linkchina.hk/zh_CN/zh_HK/'){
-				window.location.href = window.location.href.slice(0, window.location.href.length - 6) + 'home';
+				window.location.href = window.location.href.slice(0, window.location.href.length - 6) + 'company';
 			}
 		</script>
 
