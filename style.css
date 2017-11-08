@@ -1039,6 +1039,10 @@ nav.navbar.bootsnav .navbar-collapse.in .navbar-nav > li > ul > li {
 		margin-bottom: 10px;
 	}
 
+	.col-xs-12 {
+		width: 100%;
+	}
+
 }
 
 /*Company*/
